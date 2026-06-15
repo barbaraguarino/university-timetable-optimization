@@ -18,11 +18,11 @@ A arquitetura do projeto segue inicialmente o padrão de separação de responsa
 
 ```text
 university_couse_timetabling_problem/
-├── data/                    contendo os dados de entrada
+├── data/                  
 │   ├── professores.csv
 │   ├── disciplinas.csv
 │   └── ...
-├── src/                   principal da aplicação
+├── src/                  
 │   ├── domain/             
 │   ├── fitness/
 │   ├── infrastructure/            
