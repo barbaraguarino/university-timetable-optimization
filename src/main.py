@@ -22,7 +22,7 @@ def main():
         avaliador=avaliador,
         grasp=grasp,
         tamanho_populacao=50,
-        geracoes=10000,
+        geracoes=1000,
         taxa_mutacao=0.2
     )
 
