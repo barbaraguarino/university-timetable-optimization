@@ -37,7 +37,6 @@ class FitnessEvaluator:
         cromossomo.fitness = penalidade_total
         return penalidade_total
 
-
     def _avaliar_hc_por_horario(self, alocacoes_por_horario: dict) -> int:
         penalidade = 0
         for horario, genes in alocacoes_por_horario.items():
@@ -71,6 +70,17 @@ class FitnessEvaluator:
                 penalidade += config.PESO_HARD
         return penalidade
 
+    def _avaliar_hc_novas_regras(self, genes: List) -> int:
+        penalidade = 0
+        for gene in genes:
+            if gene.disciplina.needs_lab and not gene.sala.is_lab:
+                penalidade += config.PESO_HARD
+
+            if gene.disciplina.turno_curso == "NOITE" and gene.horario not in config.TURNOS_NOITE:
+                penalidade += config.PESO_HARD
+
+        return penalidade
+
     def _avaliar_sc_infraestrutura(self, genes: List) -> int:
         penalidade = 0
         for gene in genes:
@@ -79,7 +89,8 @@ class FitnessEvaluator:
                 penalidade += excedente * 10
 
             vazios = gene.sala.capacidade_maxima - gene.disciplina.numero_alunos
-            if vazios > 20:
+
+            if vazios > 20 and not gene.disciplina.prefere_sala_grande:
                 penalidade += vazios * 5
 
             if gene.disciplina.is_alta_demanda and gene.sala.capacidade_maxima < 40:
@@ -89,8 +100,9 @@ class FitnessEvaluator:
     def _avaliar_sc_pedagogia(self, genes: List) -> int:
         penalidade = 0
         for gene in genes:
-            if gene.disciplina.is_preferencia and gene.horario not in config.TURNOS_MANHA:
-                penalidade += 40
+            if gene.disciplina.periodo >= 5 and gene.disciplina.turno_curso == "INTEGRAL":
+                if gene.horario not in config.TURNOS_MANHA:
+                    penalidade += 40
         return penalidade
 
     def _avaliar_sc_jornada_docente(self, alocacoes_por_docente_dia: dict) -> int:
@@ -123,7 +135,6 @@ class FitnessEvaluator:
                 penalidade += 500
         return penalidade
 
-
     def _avaliar_sc_distribuicao_semanal(self, genes: List) -> int:
         penalidade = 0
         alocacoes_por_disciplina = defaultdict(list)
@@ -136,7 +147,8 @@ class FitnessEvaluator:
                 dias = []
                 for g in genes_da_disc:
                     dia_str = g.horario.split("_")[0]
-                    dias.append(config.DIAS_DA_SEMANA[dia_str])
+                    if dia_str in config.DIAS_DA_SEMANA:
+                        dias.append(config.DIAS_DA_SEMANA[dia_str])
 
                 dias.sort()
 
@@ -147,16 +159,5 @@ class FitnessEvaluator:
                         penalidade += 500
                     elif distancia == 1:
                         penalidade += 1000
-
-        return penalidade
-
-    def _avaliar_hc_novas_regras(self, genes: List) -> int:
-        penalidade = 0
-        for gene in genes:
-            if gene.disciplina.needs_lab and not gene.sala.is_lab:
-                penalidade += config.PESO_HARD
-
-            if gene.disciplina.turno_curso == "NOITE" and gene.horario not in config.TURNOS_NOITE:
-                penalidade += config.PESO_HARD
 
         return penalidade
