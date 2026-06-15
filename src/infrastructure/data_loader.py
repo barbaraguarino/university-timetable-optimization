@@ -5,7 +5,7 @@ from domain.models import Professor, Sala, Disciplina
 
 class DataLoader:
     def __init__(self, data_folder_name: str = 'data'):
-        self.data_folder = Path(__file__).parent.parent / data_folder_name
+        self.data_folder = Path(__file__).parent.parent.parent / data_folder_name
 
     def carregar_professores(self) -> dict:
         caminho_arquivo = self.data_folder / 'professores.csv'
