@@ -7,7 +7,6 @@ from domain.gene import Gene
 from domain.cromossomo import Cromossomo
 import config
 
-
 class Grasp:
 
     def __init__(self, professores: Dict[str, Professor], salas: List[Sala], disciplinas: List[Disciplina]):
@@ -25,8 +24,11 @@ class Grasp:
         random.shuffle(disciplinas_aleatorias)
 
         for disciplina in disciplinas_aleatorias:
+            dias_alocados = set()
+
             for _ in range(disciplina.aulas_semanais):
                 candidatos_validos = []
+                candidatos_ideais = []
 
                 horarios_permitidos = config.TURNOS_NOITE if disciplina.turno_curso == "NOITE" else config.HORARIOS_DISPONIVEIS
 
@@ -42,9 +44,13 @@ class Grasp:
                     chave_periodo = (disciplina.periodo, disciplina.turno_curso)
                     if chave_periodo in periodos_ocupados[horario]: continue
 
+                    dia_semana = horario.split("_")[0]
+
                     if disciplina.instituto != "IC":
                         sala_ext = next(s for s in self.salas if s.id == "EXTERNA")
                         candidatos_validos.append((horario, sala_ext))
+                        if dia_semana not in dias_alocados:
+                            candidatos_ideais.append((horario, sala_ext))
                         continue
 
                     for sala in self.salas:
@@ -52,8 +58,12 @@ class Grasp:
                         if sala.id not in salas_ocupadas[horario]:
                             if disciplina.needs_lab == sala.is_lab:
                                 candidatos_validos.append((horario, sala))
+                                if dia_semana not in dias_alocados:
+                                    candidatos_ideais.append((horario, sala))
 
-                if candidatos_validos:
+                if candidatos_ideais:
+                    horario_escolhido, sala_escolhida = random.choice(candidatos_ideais)
+                elif candidatos_validos:
                     horario_escolhido, sala_escolhida = random.choice(candidatos_validos)
                 else:
                     horario_escolhido = random.choice(horarios_permitidos)
@@ -71,8 +81,13 @@ class Grasp:
                 salas_ocupadas[horario_escolhido].add(sala_escolhida.id)
                 professores_ocupados[horario_escolhido].add(disciplina.id_professor)
                 periodos_ocupados[horario_escolhido].add((disciplina.periodo, disciplina.turno_curso))
+                dias_alocados.add(horario_escolhido.split("_")[0])
 
-        return Cromossomo(genes=genes)
+        cromossomo = Cromossomo(genes=genes)
+
+        cromossomo.genes.sort(key=lambda g: g.disciplina.id)
+
+        return cromossomo
 
     def gerar_populacao_inicial(self, tamanho_populacao: int) -> List[Cromossomo]:
         return [self.gerar_cromossoma() for _ in range(tamanho_populacao)]
