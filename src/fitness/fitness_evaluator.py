@@ -124,7 +124,7 @@ class FitnessEvaluator:
     def _avaliar_sc_pedagogia(self, genes: List) -> int:
         penalidade = 0
         for gene in genes:
-            if gene.disciplina.turno_curso == "INTEGRAL" and gene.disciplina.is_preferencia and gene.horario not in config.TURNOS_MANHA:
+            if gene.disciplina.turno_curso == "INTEGRAL" and gene.disciplina.periodo >= 5 and gene.horario not in config.TURNOS_MANHA:
                 penalidade += 40
         return penalidade
 
