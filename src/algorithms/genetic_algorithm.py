@@ -7,7 +7,6 @@ from fitness.fitness_evaluator import FitnessEvaluator
 from algorithms.grasp import Grasp
 import config
 
-
 class GeneticAlgorithm:
 
     def __init__(self, avaliador: FitnessEvaluator, grasp: Grasp, tamanho_populacao: int = 50, geracoes: int = 100,
@@ -31,15 +30,10 @@ class GeneticAlgorithm:
         for gene in cromossomo.genes:
             if random.random() < self.taxa_mutacao:
                 if random.random() < 0.5:
-                    # MUTAÇÃO DE HORÁRIO INTELIGENTE
                     horarios_permitidos = config.TURNOS_NOITE if gene.disciplina.turno_curso == "NOITE" else config.HORARIOS_DISPONIVEIS
                     gene.horario = random.choice(horarios_permitidos)
                 else:
-                    if gene.disciplina.instituto != "IC":
-                        continue
-
-                    salas_compativeis = [s for s in salas if
-                                         s.is_lab == gene.disciplina.needs_lab and s.id != "EXTERNA"]
+                    salas_compativeis = [s for s in salas if s.is_lab == gene.disciplina.needs_lab and s.id != "EXTERNA"]
                     if salas_compativeis:
                         gene.sala = random.choice(salas_compativeis)
 
