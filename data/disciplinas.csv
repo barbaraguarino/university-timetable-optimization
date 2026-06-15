@@ -1,55 +1,55 @@
-id,nome,instituto,id_professor,numero_alunos,periodo,is_alta_demanda,prefere_sala_grande,aulas_semanais,needs_lab,turno_curso
-TCC00296,Fundamentos de Arquiteturas de Computadores,IC,P01,45,1,False,True,2,False,INTEGRAL
-TCC00346,Laboratorio de Resolucao de Problemas,IC,P02,40,1,False,False,1,True,INTEGRAL
-TCC00308,Programacao de Computadores I,IC,P03,50,1,True,True,2,False,INTEGRAL
-TCC00301,Laboratorio de Programacao de Jogos,IC,P05,40,2,False,False,1,True,INTEGRAL
-TCC00347,Programacao Estruturada,IC,P06,45,2,True,True,2,False,INTEGRAL
-TCC00286,Arquiteturas de Computadores,IC,P07,40,3,False,False,2,False,INTEGRAL
-TCC00348,Estruturas de Dados e seus Algoritmos,IC,P08,45,3,True,True,2,False,INTEGRAL
-TCC00328,Programacao Orientada a Objetos,IC,P09,45,3,False,False,2,False,INTEGRAL
-TCC00287,Banco de Dados I,IC,P10,45,4,False,False,2,False,INTEGRAL
-TCC00292,Engenharia de Software I,IC,P11,45,4,False,False,2,False,INTEGRAL
-TCC00304,Linguagens de Programacao,IC,P12,40,4,False,False,2,False,INTEGRAL
-TCC00316,Sistemas Operacionais,IC,P13,45,4,False,False,2,False,INTEGRAL
-TCC00285,Analise e Projeto de Algoritmos,IC,P14,50,5,True,True,2,False,INTEGRAL
-TCC00349,Avaliacao de Desempenho,IC,P15,50,5,True,True,2,False,INTEGRAL
-TCC00288,Banco de Dados II,IC,P16,40,5,False,False,2,True,INTEGRAL
-TCC00226,Desenvolvimento Web,IC,P17,40,5,False,False,2,True,INTEGRAL
-TCC00306,Metodos Numericos,IC,P18,40,5,False,False,2,False,INTEGRAL
-TCC00312,Projeto de Software,IC,P19,40,5,False,False,2,False,INTEGRAL
-TCC00313,Redes de Computadores I,IC,P20,45,5,False,False,2,False,INTEGRAL
-TCC00284,Algoritmos em Grafos,IC,P21,35,6,False,False,2,False,INTEGRAL
-TCC00291,Computacao Grafica,IC,P22,40,6,False,False,2,False,INTEGRAL
-TCC00293,Engenharia de Software II,IC,P23,40,6,False,False,2,False,INTEGRAL
-TCC00305,Linguagens Formais e Teoria da Computacao,IC,P24,40,6,False,False,2,False,INTEGRAL
-TCC00307,Programacao Cientifica,IC,P25,45,6,False,False,2,False,INTEGRAL
-TCC00314,Redes de Computadores II,IC,P26,40,6,False,False,2,False,INTEGRAL
-TCC00289,Compiladores,IC,P27,45,7,False,False,2,False,INTEGRAL
-TCC00297,Inteligencia Artificial,IC,P28,40,7,False,False,2,False,INTEGRAL
-TCC00298,Interface Homem-Maquina,IC,P29,45,7,False,False,2,False,INTEGRAL
-TCC00344,Laboratorio de Programacao Paralela I,IC,P30,40,7,False,False,2,True,INTEGRAL
-TCC00318,Pesquisa Operacional,IC,P31,50,7,False,True,2,False,INTEGRAL
-TCC00315,Sistemas Distribuidos,IC,P33,40,7,False,False,2,False,INTEGRAL
-TCC00290,Computacao e Sociedade,IC,P34,40,8,False,False,2,False,INTEGRAL
-TCC00332,Fundamentos de Sistemas de Informacao,IC,P38,45,1,False,False,2,False,NOITE
-TCC00329,Fundamentos Matematicos para Computacao,IC,P39,45,1,False,False,2,False,NOITE
-TCC00308_SI,Programacao de Computadores I,IC,P40,45,1,False,False,2,False,NOITE
-TCC00333_SI,Teoria da Computacao,IC,P41,40,1,False,False,2,False,NOITE
-TCC00165,Fundamentos de Arquiteturas de Computadores,IC,P42,45,2,False,False,2,False,NOITE
-TCC00218_SI,Programacao de Computadores II,IC,P43,45,2,False,False,2,False,NOITE
-TCC00331_SI,Estruturas de Dados,IC,P44,45,3,False,False,2,False,NOITE
-TCC00224_SI,Sistemas Operacionais,IC,P45,40,3,False,False,2,False,NOITE
-TCC00334,Principios de Banco de Dados,IC,P46,45,4,False,False,2,True,NOITE
-TCC00328_SI,Programacao Orientada a Objetos,IC,P47,45,4,False,False,2,False,NOITE
-TCC00227_SI,Redes de Computadores I,IC,P48,40,4,False,False,2,False,NOITE
-TCC00226_SI,Desenvolvimento Web,IC,P49,40,5,False,False,2,True,NOITE
-TCC00225,Engenharia de Software,IC,P50,45,5,False,False,2,False,NOITE
-TCC00335_SI,Projeto de Banco de Dados,IC,P51,40,5,False,False,2,True,NOITE
-TCC00228_SI,Redes de Computadores II,IC,P52,40,5,False,False,2,False,NOITE
-TCC00336,Bancos de Dados Nao Convencionais,IC,P53,35,6,False,False,2,True,NOITE
-TCC00337,Introducao a Interacao Humano-Computador,IC,P54,35,6,False,False,2,False,NOITE
-TCC00330,Modelagem de Processos de Negocios,IC,P55,40,6,False,False,2,False,NOITE
-TCC00338,Projeto de Software,IC,P56,40,6,False,False,2,False,NOITE
-TCC00340,Desenvolvimento de Aplicacoes Corporativas,IC,P57,35,7,False,False,2,False,NOITE
-TCC00339,Gerencia de Projetos e Manutencao de Software,IC,P58,35,7,False,False,2,False,NOITE
-TCC00341,Seguranca da Informacao,IC,P59,40,7,False,False,2,False,NOITE
+id,nome,id_professor,numero_alunos,periodo,is_alta_demanda,prefere_sala_grande,aulas_semanais,needs_lab,turno_curso
+TCC00296,Fundamentos de Arquiteturas de Computadores,P01,45,1,False,True,2,False,INTEGRAL
+TCC00346,Laboratorio de Resolucao de Problemas,P02,40,1,False,False,1,True,INTEGRAL
+TCC00308,Programacao de Computadores I,P03,50,1,True,True,2,False,INTEGRAL
+TCC00301,Laboratorio de Programacao de Jogos,P05,40,2,False,False,1,True,INTEGRAL
+TCC00347,Programacao Estruturada,P06,45,2,True,True,2,False,INTEGRAL
+TCC00286,Arquiteturas de Computadores,P07,40,3,False,False,2,False,INTEGRAL
+TCC00348,Estruturas de Dados e seus Algoritmos,P08,45,3,True,True,2,False,INTEGRAL
+TCC00328,Programacao Orientada a Objetos,P09,45,3,False,False,2,False,INTEGRAL
+TCC00287,Banco de Dados I,P10,45,4,False,False,2,False,INTEGRAL
+TCC00292,Engenharia de Software I,P11,45,4,False,False,2,False,INTEGRAL
+TCC00304,Linguagens de Programacao,P12,40,4,False,False,2,False,INTEGRAL
+TCC00316,Sistemas Operacionais,P13,45,4,False,False,2,False,INTEGRAL
+TCC00285,Analise e Projeto de Algoritmos,P14,50,5,True,True,2,False,INTEGRAL
+TCC00349,Avaliacao de Desempenho,P15,50,5,True,True,2,False,INTEGRAL
+TCC00288,Banco de Dados II,P16,40,5,False,False,2,True,INTEGRAL
+TCC00226,Desenvolvimento Web,P17,40,5,False,False,2,True,INTEGRAL
+TCC00306,Metodos Numericos,P18,40,5,False,False,2,False,INTEGRAL
+TCC00312,Projeto de Software,P19,40,5,False,False,2,False,INTEGRAL
+TCC00313,Redes de Computadores I,P20,45,5,False,False,2,False,INTEGRAL
+TCC00284,Algoritmos em Grafos,P21,35,6,False,False,2,False,INTEGRAL
+TCC00291,Computacao Grafica,P22,40,6,False,False,2,False,INTEGRAL
+TCC00293,Engenharia de Software II,P23,40,6,False,False,2,False,INTEGRAL
+TCC00305,Linguagens Formais e Teoria da Computacao,P24,40,6,False,False,2,False,INTEGRAL
+TCC00307,Programacao Cientifica,P25,45,6,False,False,2,False,INTEGRAL
+TCC00314,Redes de Computadores II,P26,40,6,False,False,2,False,INTEGRAL
+TCC00289,Compiladores,P27,45,7,False,False,2,False,INTEGRAL
+TCC00297,Inteligencia Artificial,P28,40,7,False,False,2,False,INTEGRAL
+TCC00298,Interface Homem-Maquina,P29,45,7,False,False,2,False,INTEGRAL
+TCC00344,Laboratorio de Programacao Paralela I,P30,40,7,False,False,2,True,INTEGRAL
+TCC00318,Pesquisa Operacional,P31,50,7,False,True,2,False,INTEGRAL
+TCC00315,Sistemas Distribuidos,P33,40,7,False,False,2,False,INTEGRAL
+TCC00290,Computacao e Sociedade,P34,40,8,False,False,2,False,INTEGRAL
+TCC00332,Fundamentos de Sistemas de Informacao,P38,45,1,False,False,2,False,NOITE
+TCC00329,Fundamentos Matematicos para Computacao,P39,45,1,False,False,2,False,NOITE
+TCC00308_SI,Programacao de Computadores I,P40,45,1,False,False,2,False,NOITE
+TCC00333_SI,Teoria da Computacao,P41,40,1,False,False,2,False,NOITE
+TCC00165,Fundamentos de Arquiteturas de Computadores,P42,45,2,False,False,2,False,NOITE
+TCC00218_SI,Programacao de Computadores II,P43,45,2,False,False,2,False,NOITE
+TCC00331_SI,Estruturas de Dados,P44,45,3,False,False,2,False,NOITE
+TCC00224_SI,Sistemas Operacionais,P45,40,3,False,False,2,False,NOITE
+TCC00334,Principios de Banco de Dados,P46,45,4,False,False,2,True,NOITE
+TCC00328_SI,Programacao Orientada a Objetos,P47,45,4,False,False,2,False,NOITE
+TCC00227_SI,Redes de Computadores I,P48,40,4,False,False,2,False,NOITE
+TCC00226_SI,Desenvolvimento Web,P49,40,5,False,False,2,True,NOITE
+TCC00225,Engenharia de Software,P50,45,5,False,False,2,False,NOITE
+TCC00335_SI,Projeto de Banco de Dados,P51,40,5,False,False,2,True,NOITE
+TCC00228_SI,Redes de Computadores II,P52,40,5,False,False,2,False,NOITE
+TCC00336,Bancos de Dados Nao Convencionais,P53,35,6,False,False,2,True,NOITE
+TCC00337,Introducao a Interacao Humano-Computador,P54,35,6,False,False,2,False,NOITE
+TCC00330,Modelagem de Processos de Negocios,P55,40,6,False,False,2,False,NOITE
+TCC00338,Projeto de Software,P56,40,6,False,False,2,False,NOITE
+TCC00340,Desenvolvimento de Aplicacoes Corporativas,P57,35,7,False,False,2,False,NOITE
+TCC00339,Gerencia de Projetos e Manutencao de Software,P58,35,7,False,False,2,False,NOITE
+TCC00341,Seguranca da Informacao,P59,40,7,False,False,2,False,NOITE

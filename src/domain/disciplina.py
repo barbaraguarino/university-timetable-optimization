@@ -4,7 +4,6 @@ from dataclasses import dataclass
 class Disciplina:
     id: str
     nome: str
-    instituto: str
     id_professor: str
     numero_alunos: int
     periodo: int

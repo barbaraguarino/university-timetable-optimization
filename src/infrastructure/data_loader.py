@@ -54,7 +54,6 @@ class DataLoader:
                 disciplina = Disciplina(
                     id=linha['id'],
                     nome=linha['nome'],
-                    instituto=linha['instituto'],
                     id_professor=linha['id_professor'],
                     numero_alunos=int(linha['numero_alunos']),
                     periodo=int(linha['periodo']),
