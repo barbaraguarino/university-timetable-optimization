@@ -24,7 +24,6 @@ class GeneticAlgorithm:
 
     def _cruzamento(self, pai1: Cromossomo, pai2: Cromossomo) -> Cromossomo:
         ponto_corte = random.randint(1, len(pai1.genes) - 1)
-
         genes_filho = copy.deepcopy(pai1.genes[:ponto_corte]) + copy.deepcopy(pai2.genes[ponto_corte:])
         return Cromossomo(genes=genes_filho)
 
@@ -32,9 +31,17 @@ class GeneticAlgorithm:
         for gene in cromossomo.genes:
             if random.random() < self.taxa_mutacao:
                 if random.random() < 0.5:
-                    gene.horario = random.choice(config.HORARIOS_DISPONIVEIS)
+                    # MUTAÇÃO DE HORÁRIO INTELIGENTE
+                    horarios_permitidos = config.TURNOS_NOITE if gene.disciplina.turno_curso == "NOITE" else config.HORARIOS_DISPONIVEIS
+                    gene.horario = random.choice(horarios_permitidos)
                 else:
-                    gene.sala = random.choice(salas)
+                    if gene.disciplina.instituto != "IC":
+                        continue
+
+                    salas_compativeis = [s for s in salas if
+                                         s.is_lab == gene.disciplina.needs_lab and s.id != "EXTERNA"]
+                    if salas_compativeis:
+                        gene.sala = random.choice(salas_compativeis)
 
     def executar(self, salas: List[Sala]) -> tuple[Cromossomo, List[int]]:
         print(f"\nA gerar População Inicial via GRASP ({self.tamanho_populacao} indivíduos)...")
@@ -50,7 +57,6 @@ class GeneticAlgorithm:
 
         for geracao in range(1, self.geracoes + 1):
             nova_populacao = []
-
             nova_populacao.append(copy.deepcopy(melhor_global))
 
             while len(nova_populacao) < self.tamanho_populacao:
