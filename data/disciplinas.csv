@@ -1,9 +1,64 @@
 id,nome,id_professor,numero_alunos,periodo,is_alta_demanda,is_preferencia,aulas_semanais
-D01,Calculo I,P01,45,1,True,False,2
-D02,Laboratorio de Programacao,P02,20,1,False,False,1
-D03,Estrutura de Dados,P03,35,3,True,False,2
-D04,Engenharia de Software,P04,25,5,False,True,1
-D05,Pesquisa Operacional,P01,40,5,True,True,2
-D06,Inteligencia Artificial,P02,30,7,False,True,2
-D07,Redes de Computadores,P03,45,3,True,False,2
-D08,Sistemas Operacionais,P04,30,3,False,False,1
+TCC00296,Fundamentos de Arquiteturas de Computadores,P01,45,1,False,False,2
+GGM00137,Fundamentos de Calculo e Geometria,P02,50,1,True,False,2
+TCC00346,Laboratorio de Resolucao de Problemas,P03,40,1,False,False,1
+GAN00167,Matematica Discreta,P04,50,1,True,False,2
+TCC00308,Programacao de Computadores I,P05,50,1,True,False,2
+TET00347,Circuitos Digitais para Ciencia da Computacao,P06,40,2,False,False,2
+GMA00154,Calculo I,P07,50,2,True,False,2
+TCC00301,Laboratorio de Programacao de Jogos,P08,40,2,False,False,1
+TCC00347,Programacao Estruturada,P09,45,2,True,False,2
+GAN00140,Algebra Linear,P10,45,2,True,False,2
+TCC00286,Arquiteturas de Computadores,P11,40,3,False,False,2
+GMA00155,Calculo II,P12,50,3,True,False,2
+TCC00348,Estruturas de Dados e seus Algoritmos,P13,45,3,True,False,2
+GFI00158,Fisica I,P14,45,3,True,False,2
+GAN00166,Logica para a Ciencia da Computacao,P15,40,3,False,False,2
+TCC00328,Programacao Orientada a Objetos,P16,45,3,True,False,2
+TCC00287,Banco de Dados I,P17,45,4,True,False,2
+TCC00292,Engenharia de Software I,P18,45,4,True,False,2
+GET00177,Estatistica Basica,P19,45,4,False,False,2
+TCC00304,Linguagens de Programacao,P20,40,4,False,False,2
+TCC00316,Sistemas Operacionais,P21,45,4,True,False,2
+TCC00285,Analise e Projeto de Algoritmos,P22,35,5,True,True,2
+TCC00349,Avaliacao de Desempenho,P23,35,5,False,True,2
+TCC00288,Banco de Dados II,P24,40,5,True,True,2
+TCC00226,Desenvolvimento Web,P25,40,5,True,True,2
+TCC00306,Metodos Numericos,P26,40,5,False,True,2
+TCC00312,Projeto de Software,P27,40,5,False,True,2
+TCC00313,Redes de Computadores I,P28,45,5,True,True,2
+TCC00284,Algoritmos em Grafos,P29,35,6,False,True,2
+TCC00291,Computacao Grafica,P30,35,6,False,True,2
+TCC00293,Engenharia de Software II,P31,40,6,True,True,2
+TCC00305,Linguagens Formais e Teoria da Computacao,P32,35,6,False,True,2
+TCC00307,Programacao Cientifica,P33,35,6,False,True,2
+TCC00314,Redes de Computadores II,P34,40,6,True,True,2
+TCC00289,Compiladores,P35,35,7,False,True,2
+TCC00297,Inteligencia Artificial,P36,40,7,True,True,2
+TCC00298,Interface Homem-Maquina,P37,35,7,False,True,2
+TCC00344,Laboratorio de Programacao Paralela I,P38,30,7,False,True,1
+TCC00318,Pesquisa Operacional,P39,40,7,True,True,2
+TCC00315,Sistemas Distribuidos,P41,40,7,True,True,2
+TCC00290,Computacao e Sociedade,P42,40,8,False,True,2
+TCC00332,Fundamentos de Sistemas de Informacao,P46,45,1,False,False,2
+TCC00329,Fundamentos Matematicos para Computacao,P47,45,1,True,False,2
+TCC00308_SI,Programacao de Computadores I,P48,45,1,True,False,2
+TCC00333,Teoria da Computacao para Sistemas de Informacao,P49,40,1,False,False,2
+TCC00165,Fundamentos de Arquiteturas de Computadores,P50,45,2,False,False,2
+TCC00218,Programacao de Computadores II para Sistemas de Informacao,P51,45,2,True,False,2
+TCC00331,Estruturas de Dados para Sistemas de Informacao,P52,45,3,True,False,2
+TCC00224,Sistemas Operacionais para Sistemas de Informacao,P53,40,3,True,False,2
+TCC00334,Principios de Banco de Dados,P54,45,4,True,False,2
+TCC00328_SI,Programacao Orientada a Objetos,P55,45,4,True,False,2
+TCC00227,Redes de Computadores I para Sistemas de Informacao,P56,40,4,True,False,2
+TCC00226_SI,Desenvolvimento Web,P57,40,5,True,True,2
+TCC00225,Engenharia de Software,P58,45,5,False,True,2
+TCC00335,Projeto de Banco de Dados para Sistemas de Informacao,P59,40,5,True,True,2
+TCC00228,Redes de Computadores II para Sistemas de Informacao,P60,40,5,True,True,2
+TCC00336,Bancos de Dados Nao Convencionais,P61,35,6,False,True,2
+TCC00337,Introducao a Interacao Humano-Computador,P62,35,6,False,True,2
+TCC00330,Modelagem de Processos de Negocios,P63,40,6,False,True,2
+TCC00338,Projeto de Software,P64,40,6,False,True,2
+TCC00340,Desenvolvimento de Aplicacoes Corporativas,P01,35,7,True,True,2
+TCC00339,Gerencia de Projetos e Manutencao de Software,P02,35,7,False,True,2
+TCC00341,Seguranca da Informacao,P03,40,7,False,True,2
