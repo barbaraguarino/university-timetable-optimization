@@ -18,19 +18,20 @@ A arquitetura do projeto segue inicialmente o padrão de separação de responsa
 
 ```text
 university_couse_timetabling_problem/
-├── data/                   # Arquivos CSV contendo os dados de entrada
+├── data/                    contendo os dados de entrada
 │   ├── professores.csv
 │   ├── disciplinas.csv
 │   └── ...
-├── src/                    # Código-fonte principal da aplicação
-│   ├── domain/             # Entidades de negócio (Disciplina, Professor, Sala)
-│   ├── fitness/            # Motor de cálculo de penalidades (Avaliador)
-│   ├── algorithms/         # Implementação do GRASP e do Algoritmo Genético
-│   └── main.py             # Ponto de entrada (CLI) da aplicação
-├── tests/                  # Suítes de testes automatizados
-│   └── test_fitness.py     # Testes unitários do avaliador matemático
-├── LICENSE                 # Licença de direitos autorais (Privada)
-└── README.md               # Documentação principal
+├── src/                   principal da aplicação
+│   ├── domain/             
+│   ├── fitness/
+│   ├── infrastructure/            
+│   ├── algorithms/         
+│   └── main.py             
+├── tests/                  
+│   └── test_fitness.py      
+├── LICENSE                
+└── README.md               
 ```
 
 ## Como Executar
