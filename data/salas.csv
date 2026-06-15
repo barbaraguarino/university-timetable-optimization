@@ -1,30 +1,32 @@
-id,capacidade_maxima, is_lab
-S01,60, False
-S02,60, False
-S03,60, False
-S04,60, False
-S05,50, False
-S06,50, False
-S07,50, False
-S08,50, False
-S09,40, False
-S10,40, False
-S11,40, False
-S12,40, False
-S13,40, False
-S14,40, False
-S15,40, False
-S16,40, False
-S17,40, False
-S18,40, False
-L01,30, True
-L02,30, True
-L03,30, True
-L04,30, True
-L05,25, True
-L06,25, True
-L07,20, True
-L08,20, True
-L09,20, True
-L10,20, True
+id,capacidade_maxima,is_lab
+A01,100,False
+A02,80,False
+S01,60,False
+S02,60,False
+S03,60,False
+S04,60,False
+S05,50,False
+S06,50,False
+S07,50,False
+S08,50,False
+S09,40,False
+S10,40,False
+S11,40,False
+S12,40,False
+S13,40,False
+S14,40,False
+S15,40,False
+S16,40,False
+S17,40,False
+S18,40,False
+L01,30,True
+L02,30,True
+L03,30,True
+L04,30,True
+L05,25,True
+L06,25,True
+L07,20,True
+L08,20,True
+L09,20,True
+L10,20,True
 EXTERNA,9999,False
