@@ -24,6 +24,7 @@ class Disciplina:
     periodo: int
     is_alta_demanda: bool
     is_preferencia: bool
+    aulas_semanais: int
 
 @dataclass
 class Gene:

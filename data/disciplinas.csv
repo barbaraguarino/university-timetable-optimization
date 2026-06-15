@@ -1,9 +1,9 @@
-id,nome,id_professor,numero_alunos,periodo,is_alta_demanda,is_preferencia
-D01,Calculo I,P01,45,1,True,False
-D02,Laboratorio de Programacao,P02,20,1,False,False
-D03,Estrutura de Dados,P03,35,3,True,False
-D04,Engenharia de Software,P04,25,5,False,True
-D05,Pesquisa Operacional,P01,40,5,True,True
-D06,Inteligencia Artificial,P02,30,7,False,True
-D07,Redes de Computadores,P03,45,3,True,False
-D08,Sistemas Operacionais,P04,30,3,False,False
+id,nome,id_professor,numero_alunos,periodo,is_alta_demanda,is_preferencia,aulas_semanais
+D01,Calculo I,P01,45,1,True,False,2
+D02,Laboratorio de Programacao,P02,20,1,False,False,1
+D03,Estrutura de Dados,P03,35,3,True,False,2
+D04,Engenharia de Software,P04,25,5,False,True,1
+D05,Pesquisa Operacional,P01,40,5,True,True,2
+D06,Inteligencia Artificial,P02,30,7,False,True,2
+D07,Redes de Computadores,P03,45,3,True,False,2
+D08,Sistemas Operacionais,P04,30,3,False,False,1

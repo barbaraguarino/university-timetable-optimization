@@ -13,3 +13,11 @@ HORARIOS_PROIBIDOS = ["Quarta_16h"]
 HORARIOS_RUINS = ["Segunda_07h", "Sexta_18h", "Sexta_20h"]
 
 PESO_HARD = 1000
+
+DIAS_DA_SEMANA = {
+    "Segunda": 1,
+    "Terca": 2,
+    "Quarta": 3,
+    "Quinta": 4,
+    "Sexta": 5
+}

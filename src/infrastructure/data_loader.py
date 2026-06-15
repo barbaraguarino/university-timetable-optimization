@@ -55,7 +55,8 @@ class DataLoader:
                     numero_alunos=int(linha['numero_alunos']),
                     periodo=int(linha['periodo']),
                     is_alta_demanda=linha['is_alta_demanda'].strip().lower() == 'true',
-                    is_preferencia=linha['is_preferencia'].strip().lower() == 'true'
+                    is_preferencia=linha['is_preferencia'].strip().lower() == 'true',
+                    aulas_semanais=int(linha['aulas_semanais'])
                 )
                 disciplinas.append(disciplina)
 

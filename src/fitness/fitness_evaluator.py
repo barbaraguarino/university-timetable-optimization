@@ -26,6 +26,7 @@ class FitnessEvaluator:
         penalidade_total += self._avaliar_hc_por_horario(alocacoes_por_horario)
         penalidade_total += self._avaliar_hc_disponibilidade(cromossomo.genes)
 
+        penalidade_total += self._avaliar_sc_distribuicao_semanal(cromossomo.genes)
         penalidade_total += self._avaliar_sc_infraestrutura(cromossomo.genes)
         penalidade_total += self._avaliar_sc_pedagogia(cromossomo.genes)
         penalidade_total += self._avaliar_sc_jornada_docente(alocacoes_por_docente_dia)
@@ -119,4 +120,31 @@ class FitnessEvaluator:
         for id_prof, contagem in horarios_ruins_por_prof.items():
             if contagem > 1:
                 penalidade += 500
+        return penalidade
+
+
+    def _avaliar_sc_distribuicao_semanal(self, genes: List) -> int:
+        penalidade = 0
+        alocacoes_por_disciplina = defaultdict(list)
+
+        for gene in genes:
+            alocacoes_por_disciplina[gene.disciplina.id].append(gene)
+
+        for id_disc, genes_da_disc in alocacoes_por_disciplina.items():
+            if len(genes_da_disc) > 1:
+                dias = []
+                for g in genes_da_disc:
+                    dia_str = g.horario.split("_")[0]
+                    dias.append(config.DIAS_DA_SEMANA[dia_str])
+
+                dias.sort()
+
+                for i in range(len(dias) - 1):
+                    distancia = dias[i + 1] - dias[i]
+
+                    if distancia == 0:
+                        penalidade += 500
+                    elif distancia == 1:
+                        penalidade += 1000
+
         return penalidade
