@@ -37,24 +37,14 @@ class Grasp:
 
                     prof = self.professores.get(disciplina.id_professor)
                     if prof and not prof.is_disponivel(horario): continue
-
-                    if disciplina.id_professor != "EXT" and disciplina.id_professor in professores_ocupados[
-                        horario]: continue
+                    if disciplina.id_professor in professores_ocupados[horario]: continue
 
                     chave_periodo = (disciplina.periodo, disciplina.turno_curso)
                     if chave_periodo in periodos_ocupados[horario]: continue
 
                     dia_semana = horario.split("_")[0]
 
-                    if disciplina.instituto != "IC":
-                        sala_ext = next(s for s in self.salas if s.id == "EXTERNA")
-                        candidatos_validos.append((horario, sala_ext))
-                        if dia_semana not in dias_alocados:
-                            candidatos_ideais.append((horario, sala_ext))
-                        continue
-
                     for sala in self.salas:
-                        if sala.id == "EXTERNA": continue
                         if sala.id not in salas_ocupadas[horario]:
                             if disciplina.needs_lab == sala.is_lab:
                                 candidatos_validos.append((horario, sala))
@@ -67,13 +57,9 @@ class Grasp:
                     horario_escolhido, sala_escolhida = random.choice(candidatos_validos)
                 else:
                     horario_escolhido = random.choice(horarios_permitidos)
-                    if disciplina.instituto != "IC":
-                        sala_escolhida = next(s for s in self.salas if s.id == "EXTERNA")
-                    else:
-                        salas_compativeis = [s for s in self.salas if
-                                             s.is_lab == disciplina.needs_lab and s.id != "EXTERNA"]
-                        sala_escolhida = random.choice(salas_compativeis) if salas_compativeis else random.choice(
-                            self.salas)
+                    salas_compativeis = [s for s in self.salas if s.is_lab == disciplina.needs_lab]
+                    sala_escolhida = random.choice(salas_compativeis) if salas_compativeis else random.choice(
+                        self.salas)
 
                 gene = Gene(disciplina=disciplina, sala=sala_escolhida, horario=horario_escolhido)
                 genes.append(gene)
@@ -84,7 +70,6 @@ class Grasp:
                 dias_alocados.add(horario_escolhido.split("_")[0])
 
         cromossomo = Cromossomo(genes=genes)
-
         cromossomo.genes.sort(key=lambda g: g.disciplina.id)
 
         return cromossomo
