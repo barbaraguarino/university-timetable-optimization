@@ -1,1 +1,0 @@
-print("Otimização de Quadro de Horários Universitário (UCTP)")
