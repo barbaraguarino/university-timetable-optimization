@@ -22,8 +22,8 @@ def main():
         avaliador=avaliador,
         grasp=grasp,
         tamanho_populacao=50,
-        geracoes=100,
-        taxa_mutacao=0.1
+        geracoes=10000,
+        taxa_mutacao=0.2
     )
 
     print("\nA iniciar Algoritmo Genético Híbrido...")
