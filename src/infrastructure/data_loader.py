@@ -35,7 +35,8 @@ class DataLoader:
             for linha in leitor_csv:
                 sala = Sala(
                     id=linha['id'],
-                    capacidade_maxima=int(linha['capacidade_maxima'])
+                    capacidade_maxima=int(linha['capacidade_maxima']),
+                    is_lab=linha['is_lab'].strip().lower() == 'true'
                 )
                 salas.append(sala)
 
@@ -51,12 +52,15 @@ class DataLoader:
                 disciplina = Disciplina(
                     id=linha['id'],
                     nome=linha['nome'],
+                    instituto=linha['instituto'],
                     id_professor=linha['id_professor'],
                     numero_alunos=int(linha['numero_alunos']),
                     periodo=int(linha['periodo']),
                     is_alta_demanda=linha['is_alta_demanda'].strip().lower() == 'true',
-                    is_preferencia=linha['is_preferencia'].strip().lower() == 'true',
-                    aulas_semanais=int(linha['aulas_semanais'])
+                    prefere_sala_grande=linha['prefere_sala_grande'].strip().lower() == 'true',
+                    aulas_semanais=int(linha['aulas_semanais']),
+                    needs_lab=linha['needs_lab'].strip().lower() == 'true',
+                    turno_curso=linha['turno_curso'].strip().upper()
                 )
                 disciplinas.append(disciplina)
 

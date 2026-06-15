@@ -25,6 +25,7 @@ class FitnessEvaluator:
 
         penalidade_total += self._avaliar_hc_por_horario(alocacoes_por_horario)
         penalidade_total += self._avaliar_hc_disponibilidade(cromossomo.genes)
+        penalidade_total += self._avaliar_hc_novas_regras(cromossomo.genes)
 
         penalidade_total += self._avaliar_sc_distribuicao_semanal(cromossomo.genes)
         penalidade_total += self._avaliar_sc_infraestrutura(cromossomo.genes)
@@ -146,5 +147,16 @@ class FitnessEvaluator:
                         penalidade += 500
                     elif distancia == 1:
                         penalidade += 1000
+
+        return penalidade
+
+    def _avaliar_hc_novas_regras(self, genes: List) -> int:
+        penalidade = 0
+        for gene in genes:
+            if gene.disciplina.needs_lab and not gene.sala.is_lab:
+                penalidade += config.PESO_HARD
+
+            if gene.disciplina.turno_curso == "NOITE" and gene.horario not in config.TURNOS_NOITE:
+                penalidade += config.PESO_HARD
 
         return penalidade

@@ -14,17 +14,21 @@ class Professor:
 class Sala:
     id: str
     capacidade_maxima: int
+    is_lab: bool
 
 @dataclass
 class Disciplina:
     id: str
     nome: str
+    instituto: str
     id_professor: str
     numero_alunos: int
     periodo: int
     is_alta_demanda: bool
-    is_preferencia: bool
+    prefere_sala_grande: bool
     aulas_semanais: int
+    needs_lab: bool
+    turno_curso: str
 
 @dataclass
 class Gene:

@@ -21,21 +21,29 @@ class Grasp:
         random.shuffle(disciplinas_aleatorias)
 
         for disciplina in disciplinas_aleatorias:
-            # NOVO LAÇO: Roda N vezes dependendo da carga horária da disciplina
             for _ in range(disciplina.aulas_semanais):
                 candidatos_validos = []
 
                 for horario in config.HORARIOS_DISPONIVEIS:
                     if horario in config.HORARIOS_PROIBIDOS: continue
+                    if horario in config.HORARIOS_PROIBIDOS: continue
 
                     prof = self.professores.get(disciplina.id_professor)
                     if prof and not prof.is_disponivel(horario): continue
+
+                    if disciplina.instituto != "IC":
+                        sala_escolhida = next(s for s in self.salas if s.id == "EXTERNA")
+                        candidatos_validos.append((horario, sala_escolhida))
+                        continue
                     if disciplina.id_professor in professores_ocupados[horario]: continue
                     if disciplina.periodo in periodos_ocupados[horario]: continue
+                    if disciplina.turno_curso == "NOITE" and horario not in config.TURNOS_NOITE:
+                        continue
 
                     for sala in self.salas:
                         if sala.id not in salas_ocupadas[horario]:
-                            candidatos_validos.append((horario, sala))
+                            if disciplina.needs_lab == sala.is_lab:
+                                candidatos_validos.append((horario, sala))
 
                 if candidatos_validos:
                     horario_escolhido, sala_escolhida = random.choice(candidatos_validos)

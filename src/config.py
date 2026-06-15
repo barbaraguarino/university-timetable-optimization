@@ -8,6 +8,8 @@ HORARIOS_DISPONIVEIS = [
 
 TURNOS_MANHA = [h for h in HORARIOS_DISPONIVEIS if "07h" in h or "09h" in h or "11h" in h]
 
+TURNOS_NOITE = [h for h in HORARIOS_DISPONIVEIS if "18h" in h or "20h" in h]
+
 HORARIOS_PROIBIDOS = ["Quarta_16h"]
 
 HORARIOS_RUINS = ["Segunda_07h", "Sexta_18h", "Sexta_20h"]
