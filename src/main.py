@@ -23,7 +23,7 @@ def main():
         grasp=grasp,
         tamanho_populacao=50,
         geracoes=1000,
-        taxa_mutacao=0.2
+        taxa_mutacao=0.01
     )
 
     print("\nA iniciar Algoritmo Genético Híbrido...")
