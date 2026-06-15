@@ -1,4 +1,5 @@
-import csv
+import time
+import os
 from infrastructure.data_loader import DataLoader
 from fitness.fitness_evaluator import FitnessEvaluator
 from algorithms.grasp import Grasp
@@ -8,12 +9,15 @@ from algorithms.genetic_algorithm import GeneticAlgorithm
 def main():
     print("Otimização de Quadro de Horários Universitário (UCTP)\n")
 
-    loader = DataLoader()
+    DIRETORIO_RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    loader = DataLoader('data/')
+
     professores = loader.carregar_professores()
     salas = loader.carregar_salas()
     disciplinas = loader.carregar_disciplinas()
 
-    print(f"Dados carregados: {len(professores)} Docentes | {len(salas)} Salas | {len(disciplinas)} Disciplinas")
+    print(f"Dados carregados: {len(professores)} Docentes | {len(salas)} Salas | {len(disciplinas)} Disciplinas\n")
 
     avaliador = FitnessEvaluator(professores)
     grasp = Grasp(professores, salas, disciplinas)
@@ -26,28 +30,42 @@ def main():
         taxa_mutacao=0.01
     )
 
-    print("\nA iniciar Algoritmo Genético Híbrido...")
+    print("A iniciar Algoritmo Memético (GRASP + Genético + Busca Local)...")
+    start_time = time.time()
     melhor_solucao, historico = ag.executar(salas)
+    end_time = time.time()
 
-    caminho_resultados = loader.data_folder.parent / 'resultados.csv'
-    with open(caminho_resultados, mode='w', encoding='utf-8', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(['Geracao', 'Melhor_Fitness'])
-        for i, valor_fitness in enumerate(historico):
-            writer.writerow([i, valor_fitness])
+    dias_ordem = {"Segunda": 1, "Terca": 2, "Quarta": 3, "Quinta": 4, "Sexta": 5}
+    genes_ordenados = sorted(
+        melhor_solucao.genes,
+        key=lambda g: (dias_ordem.get(g.horario.split('_')[0], 99), g.horario.split('_')[1])
+    )
 
-    print(f"\nFicheiro de resultados exportado com sucesso para: {caminho_resultados.name}")
+    nome_arquivo = os.path.join(DIRETORIO_RAIZ, "grade_de_horarios_final.csv")
+
+    with open(nome_arquivo, 'w', encoding='utf-8') as f:
+        f.write("Codigo_Disciplina,Nome_Disciplina,Professor,Sala,Horario\n")
+
+        for gene in genes_ordenados:
+            prof = professores.get(gene.disciplina.id_professor)
+            nome_professor = prof.nome if prof else gene.disciplina.id_professor
+
+            f.write(f"{gene.disciplina.id},{gene.disciplina.nome},{nome_professor},{gene.sala.id},{gene.horario}\n")
+
+    print(f"\nFicheiro de resultados exportado com sucesso para a raiz: {nome_arquivo}")
+    print(f"Tempo de execução: {end_time - start_time:.2f} segundos")
 
     print("\n=========================================")
     print("RESULTADO FINAL OTIMIZADO")
     print("=========================================")
-    print(f"Nota de Penalidade (Fitness): {melhor_solucao.fitness} pontos")
+    print(f"Nota de Penalidade (Fitness): {melhor_solucao.fitness} pontos\n")
 
-    print("\nGrelha de Horários Gerada:")
-    genes_ordenados = sorted(melhor_solucao.genes, key=lambda g: g.horario)
+    print("Grelha de Horários Gerada:")
     for gene in genes_ordenados:
-        print(f"[{gene.horario}] {gene.disciplina.nome} (Prof: {gene.disciplina.id_professor}) -> Sala: {gene.sala.id}")
+        prof = professores.get(gene.disciplina.id_professor)
+        nome_professor = prof.nome if prof else gene.disciplina.id_professor
+        print(f"[{gene.horario}] {gene.disciplina.nome} (Prof: {nome_professor}) -> Sala: {gene.sala.id}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
