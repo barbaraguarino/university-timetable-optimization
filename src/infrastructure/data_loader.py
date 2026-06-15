@@ -1,6 +1,8 @@
 import csv
 from pathlib import Path
-from domain.models import Professor, Sala, Disciplina
+from domain.professor import Professor
+from domain.sala import Sala
+from domain.disciplina import Disciplina
 
 
 class DataLoader:

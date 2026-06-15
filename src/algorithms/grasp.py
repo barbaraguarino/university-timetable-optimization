@@ -1,6 +1,10 @@
 import random
 from typing import List, Dict
-from domain.models import Disciplina, Sala, Professor, Gene, Cromossomo
+from domain.cromossomo import Cromossomo
+from domain.disciplina import Disciplina
+from domain.sala import Sala
+from domain.professor import Professor
+from domain.gene import Gene
 import config
 
 

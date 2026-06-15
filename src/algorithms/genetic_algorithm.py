@@ -1,7 +1,8 @@
 import random
 import copy
 from typing import List
-from domain.models import Cromossomo, Sala
+from domain.cromossomo import Cromossomo
+from domain.sala import Sala
 from fitness.fitness_evaluator import FitnessEvaluator
 from algorithms.grasp import Grasp
 import config

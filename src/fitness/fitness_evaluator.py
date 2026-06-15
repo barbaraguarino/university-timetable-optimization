@@ -1,6 +1,7 @@
 from collections import defaultdict
 from typing import Dict, List
-from domain.models import Cromossomo, Professor
+from domain.cromossomo import Cromossomo
+from domain.professor import Professor
 import config
 
 
