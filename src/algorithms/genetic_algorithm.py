@@ -2,7 +2,7 @@ import random
 import copy
 from typing import List
 from domain.models import Cromossomo, Sala
-from fitness_evaluator import FitnessEvaluator
+from fitness.fitness_evaluator import FitnessEvaluator
 from algorithms.grasp import Grasp
 import config
 

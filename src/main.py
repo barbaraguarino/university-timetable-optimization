@@ -1,6 +1,6 @@
 import csv
-from data_loader import DataLoader
-from fitness_evaluator import FitnessEvaluator
+from infrastructure.data_loader import DataLoader
+from fitness.fitness_evaluator import FitnessEvaluator
 from algorithms.grasp import Grasp
 from algorithms.genetic_algorithm import GeneticAlgorithm
 
