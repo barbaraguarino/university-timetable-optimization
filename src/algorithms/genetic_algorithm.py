@@ -13,7 +13,6 @@ def _selecao_torneio(populacao: List[Cromossomo], tamanho_torneio: int = 3) -> C
     torneio = random.sample(populacao, tamanho_torneio)
     return min(torneio, key=lambda ind: ind.fitness)
 
-
 def _cruzamento(pai1: Cromossomo, pai2: Cromossomo) -> Cromossomo:
     genes_filho = []
     dict_pai1 = defaultdict(list)
@@ -32,7 +31,6 @@ def _cruzamento(pai1: Cromossomo, pai2: Cromossomo) -> Cromossomo:
     cromossomo_filho.genes.sort(key=lambda g: f"{g.disciplina.id}_{g.disciplina.turma}")
     return cromossomo_filho
 
-
 class GeneticAlgorithm:
 
     def __init__(self, avaliador: FitnessEvaluator, grasp: Grasp, tamanho_populacao: int = 50,
@@ -49,14 +47,14 @@ class GeneticAlgorithm:
         self.tamanho_elite_busca_local = 3
 
     def executar(self, salas: List[Sala]) -> Tuple[Cromossomo, List[int]]:
-        print(f"\nA gerar População Inicial via GRASP ({self.tamanho_populacao} indivíduos)...")
+        print(f"\nGerando População Inicial via GRASP ({self.tamanho_populacao} indivíduos).")
         populacao = self.grasp.gerar_populacao_inicial(self.tamanho_populacao)
 
         for ind in populacao:
             self.avaliador.calcular_fitness(ind)
 
         melhor_global = min(populacao, key=lambda ind: ind.fitness)
-        print(f"Melhor Fitness Inicial (Geração 0): {melhor_global.fitness}")
+        print(f"Geração 0 -> Fitness: {melhor_global.fitness}")
 
         historico_fitness = [melhor_global.fitness]
         geracoes_sem_melhoria = 0
@@ -76,15 +74,17 @@ class GeneticAlgorithm:
             else:
                 geracoes_sem_melhoria += 1
 
-            print(f"Geração {geracao} | Melhor Fitness: {melhor_global.fitness}")
             historico_fitness.append(melhor_global.fitness)
 
+            if geracao % 100 == 0:
+                print(f"Geração {geracao} -> Fitness: {melhor_global.fitness}")
+
             if geracoes_sem_melhoria >= self.limite_estagnacao:
-                populacao = self._invocar_terramoto(populacao)
+                populacao = self._invocar_terremoto(populacao)
                 geracoes_sem_melhoria = 0
 
             if melhor_global.fitness == 0:
-                print("\nSolução perfeita (0 penalidades) encontrada! A interromper evolução.")
+                print("\nSolução perfeita encontrada!")
                 break
 
         return melhor_global, historico_fitness
@@ -162,8 +162,8 @@ class GeneticAlgorithm:
                     gene1.sala, gene2.sala = gene2.sala, gene1.sala
                     cromossomo.fitness = melhor_fitness
 
-    def _invocar_terramoto(self, populacao: List[Cromossomo]) -> List[Cromossomo]:
-        print(f"Estagnação detetada. A invocar o Terramoto (Restart Parcial)...")
+    def _invocar_terremoto(self, populacao: List[Cromossomo]) -> List[Cromossomo]:
+        print(f"Estagnação detectada. Invocando o Terremoto...")
         populacao.sort(key=lambda ind: ind.fitness)
 
         nova_populacao_restart = [copy.deepcopy(ind) for ind in populacao[:self.elitismo_restart]]
