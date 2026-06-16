@@ -9,14 +9,14 @@ from domain.cromossomo import Cromossomo
 
 
 def _criar_diretorio_resultados() -> Path:
+    """Cria o diretório 'resultados' na raiz do projeto, caso ele não exista."""
     dir_raiz = Path(__file__).resolve().parent.parent
     dir_resultados = dir_raiz / "resultados"
 
     dir_resultados.mkdir(parents=True, exist_ok=True)
     return dir_resultados
 
-
-def _salvar_grade_horarios(cromossomo: Cromossomo, professores: dict, caminho_arquivo: Path):
+def _salvar_grade_horarios(cromossomo: Cromossomo, professores: dict, caminho_arquivo: Path) -> None:
     dias_ordem = {"Segunda": 1, "Terca": 2, "Quarta": 3, "Quinta": 4, "Sexta": 5}
     genes_ordenados = sorted(
         cromossomo.genes,
@@ -40,7 +40,7 @@ def _salvar_grade_horarios(cromossomo: Cromossomo, professores: dict, caminho_ar
                 gene.horario
             ])
 
-def _salvar_historico_fitness(historico: list, caminho_arquivo: Path):
+def _salvar_historico_fitness(historico: list, caminho_arquivo: Path) -> None:
     with open(caminho_arquivo, mode='w', encoding='utf-8', newline='') as f:
         escritor = csv.writer(f)
         escritor.writerow(["Geracao", "Fitness"])
@@ -48,6 +48,14 @@ def _salvar_historico_fitness(historico: list, caminho_arquivo: Path):
         for geracao, fitness in enumerate(historico):
             escritor.writerow([geracao, fitness])
 
+def _salvar_extrato_penalidades(avaliador: FitnessEvaluator, cromossomo: Cromossomo, caminho_arquivo: Path) -> None:
+    extrato = avaliador.auditar_solucao(cromossomo)
+
+    with open(caminho_arquivo, mode='w', encoding='utf-8', newline='') as f:
+        escritor = csv.DictWriter(f, fieldnames=["Tipo", "Regra", "Disciplina", "Detalhe", "Pontos"])
+        escritor.writeheader()
+        for linha in extrato:
+            escritor.writerow(linha)
 
 def main():
     print("\nOtimização de Quadro de Horários Universitário (UCTP)\n")
@@ -78,15 +86,22 @@ def main():
     dir_resultados = _criar_diretorio_resultados()
     arq_grade = dir_resultados / "grade_final.csv"
     arq_historico = dir_resultados / "historico_geracoes.csv"
+    arq_extrato = dir_resultados / "extrato_multas.csv"
 
-    _salvar_grade_horarios(melhor_solucao, professores, arq_grade)
-    _salvar_historico_fitness(historico, arq_historico)
+    try:
+        _salvar_grade_horarios(melhor_solucao, professores, arq_grade)
+        _salvar_historico_fitness(historico, arq_historico)
+        _salvar_extrato_penalidades(avaliador, melhor_solucao, arq_extrato)
+    except PermissionError:
+        print("\nERRO: Feche os arquivos CSV que estão abertos e rode novamente para salvar!")
+        return
 
     print("\nRESULTADO FINAL OTIMIZADO")
     print(f"Tempo de execução: {end_time - start_time:.2f} segundos")
     print(f"Nota de Penalidade (Fitness): {melhor_solucao.fitness} pontos")
     print(f"Grade salva em: {arq_grade.relative_to(dir_resultados.parent)}")
     print(f"Histórico salvo em: {arq_historico.relative_to(dir_resultados.parent)}")
+    print(f"Extrato de multas salvo em: {arq_extrato.relative_to(dir_resultados.parent)}")
 
 
 if __name__ == "__main__":

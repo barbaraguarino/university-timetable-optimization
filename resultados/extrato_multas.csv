@@ -1,0 +1,53 @@
+Tipo,Regra,Disciplina,Detalhe,Pontos
+SOFT,Cadeiras Vazias,Metaheurísticas,25 lugares ociosos na S12,10
+SOFT,Cadeiras Vazias,Metaheurísticas,25 lugares ociosos na S12,10
+SOFT,Cadeiras Vazias,Tópicos em Ciência da Computação,30 lugares ociosos na S21,20
+SOFT,Cadeiras Vazias,Tópicos em Ciência da Computação,30 lugares ociosos na S13,20
+SOFT,Cadeiras Vazias,Tópicos em Computação III,39 lugares ociosos na S13,38
+SOFT,Cadeiras Vazias,Tópicos em Computação III,39 lugares ociosos na S16,38
+SOFT,Cadeiras Vazias,Tópicos em Engenharia de Software II,30 lugares ociosos na S16,20
+SOFT,Cadeiras Vazias,Tópicos em Engenharia de Software II,30 lugares ociosos na S14,20
+SOFT,Superlotação,Arquiteturas de Computadores,1 alunos em pé na sala S03,5
+SOFT,Superlotação,Banco de Dados II,14 alunos em pé na sala S01,980
+SOFT,Superlotação,Banco de Dados II,14 alunos em pé na sala S02,980
+SOFT,Superlotação,Compiladores,1 alunos em pé na sala S05,5
+SOFT,Superlotação,Inteligência Artificial,3 alunos em pé na sala S04,45
+SOFT,Cadeiras Vazias,Programação Científica,39 lugares ociosos na S21,38
+SOFT,Cadeiras Vazias,Programação Científica,39 lugares ociosos na S18,38
+SOFT,Cadeiras Vazias,Governança em Tecnologia da Informação,37 lugares ociosos na S14,34
+SOFT,Cadeiras Vazias,Governança em Tecnologia da Informação,37 lugares ociosos na S21,34
+SOFT,Superlotação,Redes de Computadores,1 alunos em pé na sala S02,5
+SOFT,Superlotação,Redes de Computadores,1 alunos em pé na sala S02,5
+SOFT,Cadeiras Vazias,Tópicos em Matemática para Computação I,38 lugares ociosos na S12,36
+SOFT,Cadeiras Vazias,Tópicos em Matemática para Computação I,38 lugares ociosos na S13,36
+SOFT,Dias Consecutivos,Banco de Dados II,Aulas sem intervalo,150
+SOFT,Dias Consecutivos,Redes de Computadores I,Aulas sem intervalo,150
+SOFT,Janela Ociosa,Várias,Turma CC-5-A1 teve janelas na Segunda,30
+SOFT,Janela Ociosa,Várias,Turma CC-5-A1 teve janelas na Quarta,15
+SOFT,Janela Ociosa,Várias,Turma CC-6-A1 teve janelas na Quarta,15
+SOFT,Janela Ociosa,Várias,Turma CC-6-A1 teve janelas na Sexta,15
+SOFT,Janela Ociosa,Várias,Turma CC-5-A1 teve janelas na Sexta,30
+SOFT,Janela Ociosa,Várias,Turma CC-4-A1 teve janelas na Segunda,15
+SOFT,Janela Ociosa,Várias,Turma CC-4-A1 teve janelas na Quarta,15
+SOFT,Janela Ociosa,Várias,Turma CC-5-A1 teve janelas na Terca,30
+SOFT,Janela Ociosa,Várias,Turma CC-7-A1 teve janelas na Quarta,30
+SOFT,Janela Ociosa,Várias,Turma CC-7-A1 teve janelas na Segunda,15
+SOFT,Janela Ociosa,Várias,Turma CC-6-A1 teve janelas na Terca,30
+SOFT,Janela Ociosa,Várias,Turma CC-6-A1 teve janelas na Segunda,15
+SOFT,Janela Ociosa,Várias,Turma CC-7-A1 teve janelas na Sexta,15
+SOFT,Janela Ociosa,Várias,Turma CC-7-A1 teve janelas na Quinta,15
+SOFT,Janela Ociosa,Várias,Turma CC-4-A1 teve janelas na Sexta,15
+SOFT,Janela Ociosa,Várias,Turma CC-6-A1 teve janelas na Quinta,30
+SOFT,Janela Ociosa,Várias,Turma CC-5-A1 teve janelas na Quinta,30
+SOFT,Janela Ociosa,Várias,Turma SI-1-A1 teve janelas na Quarta,15
+SOFT,Janela Ociosa,Várias,Turma SI-1-A1 teve janelas na Sexta,15
+SOFT,Janela Ociosa,Várias,Turma SI-8-A1 teve janelas na Segunda,15
+SOFT,Janela Ociosa,Várias,Turma CC-3-A1 teve janelas na Terca,15
+SOFT,Janela Ociosa,Várias,Turma SI-7-A1 teve janelas na Quarta,15
+SOFT,Janela Ociosa,Várias,Turma SI-1-B1 teve janelas na Segunda,15
+SOFT,Janela Ociosa,Várias,Turma SI-5-A1 teve janelas na Sexta,15
+SOFT,Janela Ociosa,Várias,Turma SI-6-A1 teve janelas na Quarta,15
+SOFT,Janela Ociosa,Várias,Turma SI-6-A1 teve janelas na Sexta,15
+SOFT,Janela Ociosa,Várias,Turma SI-6-A1 teve janelas na Quinta,15
+SOFT,Janela Ociosa,Várias,Turma SI-1-A1 teve janelas na Segunda,15
+SOFT,Janela Ociosa,Várias,Turma SI-4-A1 teve janelas na Segunda,15
