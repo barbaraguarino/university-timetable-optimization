@@ -51,18 +51,25 @@ class DataLoader:
         with open(caminho_arquivo, mode='r', encoding='utf-8') as file:
             leitor_csv = csv.DictReader(file)
             for linha in leitor_csv:
+                periodo_raw = linha.get('periodo', '').strip()
+                periodo_val = int(periodo_raw) if periodo_raw else None
+
+                curso_raw = linha.get('curso', '').strip()
+                curso_val = curso_raw if curso_raw else None
+
                 disciplina = Disciplina(
-                    id=linha['id'],
-                    nome=linha['nome'],
-                    id_professor=linha['id_professor'],
-                    numero_alunos=int(linha['numero_alunos']),
-                    periodo=int(linha['periodo']),
-                    is_alta_demanda=linha['is_alta_demanda'].strip().lower() == 'true',
-                    prefere_sala_grande=linha['prefere_sala_grande'].strip().lower() == 'true',
+                    id=linha['id'].strip(),
+                    nome=linha['nome'].strip(),
+                    turma=linha['turma'].strip(),
+                    vaga=int(linha['vaga']),
+                    turno=linha['turno'].strip().upper(),
                     aulas_semanais=int(linha['aulas_semanais']),
-                    needs_lab=linha['needs_lab'].strip().lower() == 'true',
-                    turno_curso=linha['turno_curso'].strip().upper()
+                    curso=curso_val,
+                    periodo=periodo_val,
+                    lab=linha['lab'].strip().lower() == 'true',
+                    id_professor=linha['id_professor'].strip()
                 )
+
                 disciplinas.append(disciplina)
 
         return disciplinas
