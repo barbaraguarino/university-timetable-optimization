@@ -28,8 +28,8 @@ university_couse_timetabling_problem/
 │   ├── infrastructure/            
 │   ├── algorithms/         
 │   └── main.py             
-├── tests/                  
-│   └── test_fitness.py      
+├── resultados/   
+│   └── ... 
 ├── LICENSE                
 └── README.md               
 ```
