@@ -6,7 +6,7 @@ TCC00286,Arquiteturas de Computadores,A1,66,Matutino,2,CC,3,False,P02
 TCC00349,Avaliação de Desempenho,A1,60,Matutino,2,CC,5,False,P21
 TCC00287,Banco de Dados I,A1,63,Matutino,2,CC,4,False,P55
 TCC00288,Banco de Dados II,A1,84,Matutino,2,CC,5,False,P40
-TCC00336,Banco de Dados Não Convencionais,A1,54,Noturno,2,SI,6,False,P45
+TCC00336,Banco de Dados Não Convencionais,A1,54,Noturno,2,SI,6,False,P61
 TCC00336,Banco de Dados Não Convencionais,Z1,59,Noturno,2,SI,6,False,P40
 TCC00289,Compiladores,A1,61,Matutino,2,CC,7,False,P08
 TCC00280,Computação e Meio Ambiente,A1,35,Vespertino,2,,,False,P07
@@ -25,7 +25,7 @@ TCC00348,Estrutura de Dados e Seus Algoritmos,B1,41,Matutino,2,CC,3,False,P50
 TCC00331,Estrutura de Dados Para Sistemas de Informação,A1,45,Noturno,2,SI,3,False,P49
 TCC00331,Estrutura de Dados Para Sistemas de Informação,B1,45,Noturno,2,SI,3,False,P48
 TCC00296,Fundamentos de Arquiteturas de Computadores,A1,64,Vespertino,2,CC,1,False,P02
-TCC00296,Fundamentos de Arquiteturas de Computadores,B1,54,Matutino,2,CC,1,False,P02
+TCC00296,Fundamentos de Arquiteturas de Computadores,B1,54,Matutino,2,CC,1,False,P04
 TCC00332,Fundamentos de Sistemas de Informação,A1,43,Noturno,2,SI,1,False,P55
 TCC00332,Fundamentos de Sistemas de Informação,B1,40,Noturno,2,SI,1,False,P50
 TCC00354,Fundamentos Matemáticos para Computação,A1,50,Noturno,2,SI,1,False,P60
@@ -48,7 +48,7 @@ TCC00355,Laboratório de Resolução de Problemas,EA,45,Noturno,2,SI,1,True,P57
 TCC00355,Laboratório de Resolução de Problemas,FA,45,Noturno,2,SI,1,True,P29
 TCC00304,Linguagens de Programação,A1,68,Matutino,2,CC,4,False,P08
 TCC00205,Linguagens de Programação em Lógica,A1,20,Vespertino,2,,,False,P03
-TCC00305,Linguagens Formais e Teoria da Computação,A1,70,Matutino,2,CC,6,False,P08
+TCC00305,Linguagens Formais e Teoria da Computação,A1,70,Matutino,2,CC,6,False,P09
 TCC00195,Metaheurísticas,A1,15,Matutino,2,,,False,P38
 TCC00330,Modelagem de Processos de Negócios,A1,51,Noturno,2,SI,7,False,P58
 TCC00306,Métodos Numéricos,A1,46,Matutino,2,CC,5,False,P17
@@ -121,5 +121,5 @@ TCC04135,Tópicos em Matemática para Computação I,X1,2,Matutino,2,,,False,P64
 TCC00230,Tópicos Especiais em Segurança da Informação,A1,59,Matutino,2,,,False,P38
 TCC00253,Tópicos Especiais em Sistemas de Programação I,A1,46,Noturno,2,,,False,P07
 TCC00360,Visualização de Dados,A1,60,Noturno,2,SI,6,False,P58
-TCC00202,Visualização Simulação e Jogos Digitais,X1,22,Matutino,2,,,False,P16
+TCC00202,Visualização Simulação e Jogos Digitais,X1,22,Matutino,2,,,False,P33
 TCC00371,Ética em Inteligência Artificial e Ciência de Dados,A1,31,Matutino,2,IA,1,False,P20
