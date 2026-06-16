@@ -1,6 +1,6 @@
 id,capacidade_maxima,is_lab
-S01,60,False
-S02,60,False
+S01,65,False
+S02,65,False
 S03,60,False
 S04,60,False
 S05,50,False
@@ -23,8 +23,8 @@ S21,40,False
 S22,40,False
 S23,40,False
 S24,40,False
-L01,45,True
-L02,30,True
-L03,30,True
-L04,30,True
-L05,25,True
+L01,60,True
+L02,40,True
+L03,45,True
+L04,55,True
+L05,35,True

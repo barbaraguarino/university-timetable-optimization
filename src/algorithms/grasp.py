@@ -76,7 +76,7 @@ class Grasp:
                     if disciplina.id_professor in professores_ocupados[horario]: continue
 
                     if disciplina.periodo is not None and disciplina.curso is not None:
-                        chave_periodo = (disciplina.periodo, disciplina.curso)
+                        chave_periodo = (disciplina.periodo, disciplina.curso, disciplina.turma)
                         if chave_periodo in periodos_ocupados[horario]: continue
 
                     dia_semana = horario.split("_")[0]
@@ -108,7 +108,7 @@ class Grasp:
                 professores_ocupados[horario_escolhido].add(disciplina.id_professor)
 
                 if disciplina.periodo is not None and disciplina.curso is not None:
-                    periodos_ocupados[horario_escolhido].add((disciplina.periodo, disciplina.curso))
+                    periodos_ocupados[horario_escolhido].add((disciplina.periodo, disciplina.curso, disciplina.turma))
 
                 dia_escolhido = horario_escolhido.split("_")[0]
                 dias_alocados.add(dia_escolhido)

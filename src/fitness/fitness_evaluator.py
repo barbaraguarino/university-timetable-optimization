@@ -34,7 +34,7 @@ class FitnessEvaluator:
             alocacoes_por_disciplina[disc_key].append(gene)
 
             if disc.periodo is not None and disc.curso is not None:
-                alocacoes_por_periodo_dia[(disc.periodo, disc.curso, dia)].append(gene)
+                alocacoes_por_periodo_dia[(disc.periodo, disc.curso, disc.turma, dia)].append(gene)
 
             if horario in config.HORARIOS_RUINS:
                 horarios_ruins_por_prof[disc.id_professor] += 1
@@ -101,7 +101,7 @@ class FitnessEvaluator:
                 salas_vistas.add(gene.sala.id)
 
                 if gene.disciplina.periodo is not None and gene.disciplina.curso is not None:
-                    chave_periodo = (gene.disciplina.periodo, gene.disciplina.curso)
+                    chave_periodo = (gene.disciplina.periodo, gene.disciplina.curso, gene.disciplina.turma)
                     if chave_periodo in periodos_vistos:
                         penalidade += config.PESO_HARD
                     periodos_vistos.add(chave_periodo)
