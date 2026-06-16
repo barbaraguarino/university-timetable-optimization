@@ -92,6 +92,7 @@ class FitnessEvaluator:
             penalidade += config.PESO_HARD
 
         excedente = disc.vaga - sala.capacidade_maxima
+
         if excedente > 0:
             penalidade += (excedente ** 2) * config.PESO_ALUNO_EXCEDENTE
 
