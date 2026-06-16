@@ -52,34 +52,11 @@ TCC00305,Linguagens Formais e Teoria da Computação,A1,70,Matutino,2,CC,6,False
 TCC00195,Metaheurísticas,A1,15,Matutino,2,,,False,P38
 TCC00330,Modelagem de Processos de Negócios,A1,51,Noturno,2,SI,7,False,P58
 TCC00306,Métodos Numéricos,A1,46,Matutino,2,CC,5,False,P17
-TCC00325,Métodos Numéricos,A1,53,Matutino,2,,,False,P21
-TCC00325,Métodos Numéricos,B1,55,Matutino,2,,,False,P52
-TCC00325,Métodos Numéricos,C1,55,Vespertino,2,,,False,P52
-TCC00325,Métodos Numéricos,D1,60,Noturno,2,,,False,P53
-TCC00325,Métodos Numéricos,E1,60,Matutino,2,,,False,P39
-TCC00325,Métodos Numéricos,F1,61,Vespertino,2,,,False,P57
-TCC00325,Métodos Numéricos,G1,46,Vespertino,2,,,False,P57
 TCC00318,Pesquisa Operacional,A1,60,Matutino,2,CC,7,False,P42
 TCC00368,Pesquisa Operacional para Sistemas de Informação,A1,61,Noturno,2,,,False,P57
 TCC00334,Princípios de Banco de Dados,A1,64,Noturno,2,SI,4,False,P45
 TCC00307,Programação Científica,A1,59,Matutino,2,CC,6,False,P06
 TCC00307,Programação Científica,Z1,1,Vespertino,2,CC,6,False,P29
-TCC00326,Programação de Computadores,D1,54,Vespertino,2,,,False,P21
-TCC00326,Programação de Computadores,D2,58,Vespertino,2,,,False,P24
-TCC00326,Programação de Computadores,E1,66,Noturno,2,,,False,P38
-TCC00326,Programação de Computadores,F1,46,Matutino,2,,,False,P46
-TCC00326,Programação de Computadores,F2,52,Matutino,2,,,False,P38
-TCC00326,Programação de Computadores,F3,52,Matutino,2,,,False,P12
-TCC00326,Programação de Computadores,G1,66,Matutino,2,,,False,P23
-TCC00326,Programação de Computadores,G2,53,Matutino,2,,,False,P51
-TCC00326,Programação de Computadores,G3,58,Matutino,2,,,False,P05
-TCC00326,Programação de Computadores,G4,51,Matutino,2,,,False,P41
-TCC00326,Programação de Computadores,H1,51,Vespertino,2,,,False,P12
-TCC00326,Programação de Computadores,H2,47,Vespertino,2,,,False,P41
-TCC00326,Programação de Computadores,H3,57,Vespertino,2,,,False,P58
-TCC00326,Programação de Computadores,H4,58,Vespertino,2,,,False,P51
-TCC00326,Programação de Computadores,J1,61,Vespertino,2,,,False,P47
-TCC00326,Programação de Computadores,J2,54,Vespertino,2,,,False,P49
 TCC00308,Programação de Computadores I,A1,47,Noturno,2,SI,1,False,P35
 TCC00366,Programação de Computadores I,A1,46,Noturno,2,SI,1,False,P64
 TCC00308,Programação de Computadores I,B1,49,Vespertino,2,CC;IA,1,False,P03
