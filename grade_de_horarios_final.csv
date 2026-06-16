@@ -1,0 +1,107 @@
+Codigo_Disciplina,Nome_Disciplina,Professor,Sala,Horario
+TCC00290,Computacao e Sociedade,Leonardo Gresta Paulino Murta,S20,Segunda_07h
+TCC00298,Interface Homem-Maquina,José Viterbo Filho,S04,Segunda_07h
+TCC00307,Programacao Cientifica,Isabel Cristina Mello Rosseti,S03,Segunda_07h
+TCC00313,Redes de Computadores I,Flavia Cristina Bernardini,S05,Segunda_07h
+TCC00284,Algoritmos em Grafos,Flávio Seixas,S14,Segunda_09h
+TCC00289,Compiladores,John Reed,S03,Segunda_09h
+TCC00312,Projeto de Software,Flávia Coimbra Delicato,S13,Segunda_09h
+TCC00285,Analise e Projeto de Algoritmos,Daniela Gorski Trevisan,S01,Segunda_11h
+TCC00293,Engenharia de Software II,Igor Machado Coelho,S06,Segunda_11h
+TCC00316,Sistemas Operacionais,Daniel Cardoso Moraes de Oliveira,S04,Segunda_11h
+TCC00318,Pesquisa Operacional,Leandro Augusto Frata Fernandes,S02,Segunda_11h
+TCC00287,Banco de Dados I,Carlos Alberto Soares Ribeiro,S05,Segunda_16h
+TCC00224_SI,Sistemas Operacionais,Marcos Lage,S06,Segunda_18h
+TCC00328,Programacao Orientada a Objetos,Carlos Alberto de Jesus Martinhon,S07,Segunda_18h
+TCC00329,Fundamentos Matematicos para Computacao,Luís Felipe Ignácio Cunha,S08,Segunda_18h
+TCC00335_SI,Projeto de Banco de Dados,Paulo de Figueiredo Pires,L01,Segunda_18h
+TCC00218_SI,Programacao de Computadores II,Marcelo Fornazin,S06,Segunda_20h
+TCC00226_SI,Desenvolvimento Web,Mariza Ferro,L01,Segunda_20h
+TCC00328_SI,Programacao Orientada a Objetos,Maria Cristina Silva Boeres,S01,Segunda_20h
+TCC00330,Modelagem de Processos de Negocios,Raquel Bravo,S03,Segunda_20h
+TCC00333_SI,Teoria da Computacao,Luiz Fernando Bez,S02,Segunda_20h
+TCC00291,Computacao Grafica,Helena Cristina da Gama Leitão,S02,Terca_07h
+TCC00349,Avaliacao de Desempenho,Débora Christina Muchaluat Saade,S03,Terca_07h
+TCC00292,Engenharia de Software I,Célio Vinicius Neves de Albuquerque,S01,Terca_09h
+TCC00305,Linguagens Formais e Teoria da Computacao,Igor Monteiro Moraes,S19,Terca_09h
+TCC00306,Metodos Numericos,Fábio Protti,S07,Terca_09h
+TCC00315,Sistemas Distribuidos,Leonardo Cruz da Costa,S05,Terca_09h
+TCC00286,Arquiteturas de Computadores,Aura Conci,S02,Terca_11h
+TCC00288,Banco de Dados II,Esteban Walter Gonzalez Clua,L01,Terca_11h
+TCC00296,Fundamentos de Arquiteturas de Computadores,Aline de Paula Nascimento,S01,Terca_11h
+TCC00304,Linguagens de Programacao,Christiano de Oliveira Braga,S05,Terca_11h
+TCC00308,Programacao de Computadores I,Andre Maues Brabo Pereira,S02,Terca_14h
+TCC00347,Programacao Estruturada,Antonio Augusto de Aragão Rocha,S03,Terca_14h
+TCC00165,Fundamentos de Arquiteturas de Computadores,Luiz Satoru Ochi,S02,Terca_18h
+TCC00228_SI,Redes de Computadores II,Pedro Cortez Fetter Lopes,S21,Terca_18h
+TCC00332,Fundamentos de Sistemas de Informacao,Luis Antonio Brasil Kowada,S03,Terca_18h
+TCC00334,Principios de Banco de Dados,Marcos Vinicius Naves Bêdo,L01,Terca_18h
+TCC00337,Introducao a Interacao Humano-Computador,Raphael P. de Oliveira Guerra,S09,Terca_18h
+TCC00340,Desenvolvimento de Aplicacoes Corporativas,Ricardo Leiderman,S06,Terca_18h
+TCC00225,Engenharia de Software,Patrick Moratori,S01,Terca_20h
+TCC00331_SI,Estruturas de Dados,Marco Antonio Monteiro Silva Ramos,S06,Terca_20h
+TCC00336,Bancos de Dados Nao Convencionais,Raphael Machado,L01,Terca_20h
+TCC00339,Gerencia de Projetos e Manutencao de Software,Rodrigo S. Monteiro,S07,Terca_20h
+TCC00297,Inteligencia Artificial,José Raphael Bokehi,S13,Quarta_07h
+TCC00301,Laboratorio de Programacao de Jogos,Anselmo Antunes Montenegro,L01,Quarta_07h
+TCC00312,Projeto de Software,Flávia Coimbra Delicato,S07,Quarta_07h
+TCC00226,Desenvolvimento Web,Eugene Francis Vinod Rebello,L01,Quarta_09h
+TCC00290,Computacao e Sociedade,Leonardo Gresta Paulino Murta,S21,Quarta_09h
+TCC00293,Engenharia de Software II,Igor Machado Coelho,S08,Quarta_09h
+TCC00313,Redes de Computadores I,Flavia Cristina Bernardini,S01,Quarta_11h
+TCC00314,Redes de Computadores II,João Felipe Nicolaci Pimentel,S03,Quarta_11h
+TCC00344,Laboratorio de Programacao Paralela I,Lauro Eduardo Kozovits,L01,Quarta_11h
+TCC00289,Compiladores,John Reed,S02,Quarta_14h
+TCC00346,Laboratorio de Resolucao de Problemas,Aline Marins Paes Carvalho,L01,Quarta_14h
+TCC00227_SI,Redes de Computadores I,Mario Roberto F. Benevides,S22,Quarta_18h
+TCC00330,Modelagem de Processos de Negocios,Raquel Bravo,S04,Quarta_18h
+TCC00341,Seguranca da Informacao,Taiane Coelho Ramos,S05,Quarta_18h
+TCC00226_SI,Desenvolvimento Web,Mariza Ferro,L01,Quarta_20h
+TCC00308_SI,Programacao de Computadores I,Luiz André Portes Paes Leme,S02,Quarta_20h
+TCC00328_SI,Programacao Orientada a Objetos,Maria Cristina Silva Boeres,S04,Quarta_20h
+TCC00338,Projeto de Software,Rebeca Campos Motta,S23,Quarta_20h
+TCC00348,Estruturas de Dados e seus Algoritmos,Bruno Lopes,S01,Quarta_20h
+TCC00286,Arquiteturas de Computadores,Aura Conci,S03,Quinta_07h
+TCC00307,Programacao Cientifica,Isabel Cristina Mello Rosseti,S01,Quinta_07h
+TCC00288,Banco de Dados II,Esteban Walter Gonzalez Clua,L01,Quinta_09h
+TCC00291,Computacao Grafica,Helena Cristina da Gama Leitão,S01,Quinta_09h
+TCC00318,Pesquisa Operacional,Leandro Augusto Frata Fernandes,S02,Quinta_09h
+TCC00284,Algoritmos em Grafos,Flávio Seixas,S22,Quinta_11h
+TCC00315,Sistemas Distribuidos,Leonardo Cruz da Costa,S01,Quinta_11h
+TCC00349,Avaliacao de Desempenho,Débora Christina Muchaluat Saade,S02,Quinta_11h
+TCC00292,Engenharia de Software I,Célio Vinicius Neves de Albuquerque,S02,Quinta_14h
+TCC00308,Programacao de Computadores I,Andre Maues Brabo Pereira,S02,Quinta_16h
+TCC00316,Sistemas Operacionais,Daniel Cardoso Moraes de Oliveira,S03,Quinta_16h
+TCC00165,Fundamentos de Arquiteturas de Computadores,Luiz Satoru Ochi,S04,Quinta_18h
+TCC00332,Fundamentos de Sistemas de Informacao,Luis Antonio Brasil Kowada,S02,Quinta_18h
+TCC00335_SI,Projeto de Banco de Dados,Paulo de Figueiredo Pires,L01,Quinta_18h
+TCC00337,Introducao a Interacao Humano-Computador,Raphael P. de Oliveira Guerra,S19,Quinta_18h
+TCC00340,Desenvolvimento de Aplicacoes Corporativas,Ricardo Leiderman,S24,Quinta_18h
+TCC00218_SI,Programacao de Computadores II,Marcelo Fornazin,S05,Quinta_20h
+TCC00224_SI,Sistemas Operacionais,Marcos Lage,S04,Quinta_20h
+TCC00228_SI,Redes de Computadores II,Pedro Cortez Fetter Lopes,S11,Quinta_20h
+TCC00333_SI,Teoria da Computacao,Luiz Fernando Bez,S23,Quinta_20h
+TCC00334,Principios de Banco de Dados,Marcos Vinicius Naves Bêdo,L01,Quinta_20h
+TCC00339,Gerencia de Projetos e Manutencao de Software,Rodrigo S. Monteiro,S13,Quinta_20h
+TCC00226,Desenvolvimento Web,Eugene Francis Vinod Rebello,L01,Sexta_07h
+TCC00287,Banco de Dados I,Carlos Alberto Soares Ribeiro,S03,Sexta_07h
+TCC00298,Interface Homem-Maquina,José Viterbo Filho,S08,Sexta_07h
+TCC00314,Redes de Computadores II,João Felipe Nicolaci Pimentel,S20,Sexta_07h
+TCC00285,Analise e Projeto de Algoritmos,Daniela Gorski Trevisan,S02,Sexta_09h
+TCC00297,Inteligencia Artificial,José Raphael Bokehi,S01,Sexta_09h
+TCC00304,Linguagens de Programacao,Christiano de Oliveira Braga,S18,Sexta_09h
+TCC00348,Estruturas de Dados e seus Algoritmos,Bruno Lopes,S04,Sexta_09h
+TCC00305,Linguagens Formais e Teoria da Computacao,Igor Monteiro Moraes,S04,Sexta_11h
+TCC00306,Metodos Numericos,Fábio Protti,S05,Sexta_11h
+TCC00344,Laboratorio de Programacao Paralela I,Lauro Eduardo Kozovits,L01,Sexta_11h
+TCC00296,Fundamentos de Arquiteturas de Computadores,Aline de Paula Nascimento,S04,Sexta_14h
+TCC00347,Programacao Estruturada,Antonio Augusto de Aragão Rocha,S02,Sexta_14h
+TCC00227_SI,Redes de Computadores I,Mario Roberto F. Benevides,S01,Sexta_18h
+TCC00329,Fundamentos Matematicos para Computacao,Luís Felipe Ignácio Cunha,S03,Sexta_18h
+TCC00338,Projeto de Software,Rebeca Campos Motta,S08,Sexta_18h
+TCC00341,Seguranca da Informacao,Taiane Coelho Ramos,S07,Sexta_18h
+TCC00225,Engenharia de Software,Patrick Moratori,S04,Sexta_20h
+TCC00308_SI,Programacao de Computadores I,Luiz André Portes Paes Leme,S02,Sexta_20h
+TCC00328,Programacao Orientada a Objetos,Carlos Alberto de Jesus Martinhon,S08,Sexta_20h
+TCC00331_SI,Estruturas de Dados,Marco Antonio Monteiro Silva Ramos,S06,Sexta_20h
+TCC00336,Bancos de Dados Nao Convencionais,Raphael Machado,L01,Sexta_20h

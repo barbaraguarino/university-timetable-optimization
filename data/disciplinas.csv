@@ -1,55 +1,125 @@
-id,nome,id_professor,numero_alunos,periodo,is_alta_demanda,prefere_sala_grande,aulas_semanais,needs_lab,turno_curso
-TCC00296,Fundamentos de Arquiteturas de Computadores,P01,45,1,False,True,2,False,INTEGRAL
-TCC00346,Laboratorio de Resolucao de Problemas,P02,40,1,False,False,1,True,INTEGRAL
-TCC00308,Programacao de Computadores I,P03,50,1,True,True,2,False,INTEGRAL
-TCC00301,Laboratorio de Programacao de Jogos,P05,40,2,False,False,1,True,INTEGRAL
-TCC00347,Programacao Estruturada,P06,45,2,True,True,2,False,INTEGRAL
-TCC00286,Arquiteturas de Computadores,P07,40,3,False,False,2,False,INTEGRAL
-TCC00348,Estruturas de Dados e seus Algoritmos,P08,45,3,True,True,2,False,INTEGRAL
-TCC00328,Programacao Orientada a Objetos,P09,45,3,False,False,2,False,INTEGRAL
-TCC00287,Banco de Dados I,P10,45,4,False,False,2,False,INTEGRAL
-TCC00292,Engenharia de Software I,P11,45,4,False,False,2,False,INTEGRAL
-TCC00304,Linguagens de Programacao,P12,40,4,False,False,2,False,INTEGRAL
-TCC00316,Sistemas Operacionais,P13,45,4,False,False,2,False,INTEGRAL
-TCC00285,Analise e Projeto de Algoritmos,P14,50,5,True,True,2,False,INTEGRAL
-TCC00349,Avaliacao de Desempenho,P15,50,5,True,True,2,False,INTEGRAL
-TCC00288,Banco de Dados II,P16,40,5,False,False,2,True,INTEGRAL
-TCC00226,Desenvolvimento Web,P17,40,5,False,False,2,True,INTEGRAL
-TCC00306,Metodos Numericos,P18,40,5,False,False,2,False,INTEGRAL
-TCC00312,Projeto de Software,P19,40,5,False,False,2,False,INTEGRAL
-TCC00313,Redes de Computadores I,P20,45,5,False,False,2,False,INTEGRAL
-TCC00284,Algoritmos em Grafos,P21,35,6,False,False,2,False,INTEGRAL
-TCC00291,Computacao Grafica,P22,40,6,False,False,2,False,INTEGRAL
-TCC00293,Engenharia de Software II,P23,40,6,False,False,2,False,INTEGRAL
-TCC00305,Linguagens Formais e Teoria da Computacao,P24,40,6,False,False,2,False,INTEGRAL
-TCC00307,Programacao Cientifica,P25,45,6,False,False,2,False,INTEGRAL
-TCC00314,Redes de Computadores II,P26,40,6,False,False,2,False,INTEGRAL
-TCC00289,Compiladores,P27,45,7,False,False,2,False,INTEGRAL
-TCC00297,Inteligencia Artificial,P28,40,7,False,False,2,False,INTEGRAL
-TCC00298,Interface Homem-Maquina,P29,45,7,False,False,2,False,INTEGRAL
-TCC00344,Laboratorio de Programacao Paralela I,P30,40,7,False,False,2,True,INTEGRAL
-TCC00318,Pesquisa Operacional,P31,50,7,False,True,2,False,INTEGRAL
-TCC00315,Sistemas Distribuidos,P33,40,7,False,False,2,False,INTEGRAL
-TCC00290,Computacao e Sociedade,P34,40,8,False,False,2,False,INTEGRAL
-TCC00332,Fundamentos de Sistemas de Informacao,P38,45,1,False,False,2,False,NOITE
-TCC00329,Fundamentos Matematicos para Computacao,P39,45,1,False,False,2,False,NOITE
-TCC00308_SI,Programacao de Computadores I,P40,45,1,False,False,2,False,NOITE
-TCC00333_SI,Teoria da Computacao,P41,40,1,False,False,2,False,NOITE
-TCC00165,Fundamentos de Arquiteturas de Computadores,P42,45,2,False,False,2,False,NOITE
-TCC00218_SI,Programacao de Computadores II,P43,45,2,False,False,2,False,NOITE
-TCC00331_SI,Estruturas de Dados,P44,45,3,False,False,2,False,NOITE
-TCC00224_SI,Sistemas Operacionais,P45,40,3,False,False,2,False,NOITE
-TCC00334,Principios de Banco de Dados,P46,45,4,False,False,2,True,NOITE
-TCC00328_SI,Programacao Orientada a Objetos,P47,45,4,False,False,2,False,NOITE
-TCC00227_SI,Redes de Computadores I,P48,40,4,False,False,2,False,NOITE
-TCC00226_SI,Desenvolvimento Web,P49,40,5,False,False,2,True,NOITE
-TCC00225,Engenharia de Software,P50,45,5,False,False,2,False,NOITE
-TCC00335_SI,Projeto de Banco de Dados,P51,40,5,False,False,2,True,NOITE
-TCC00228_SI,Redes de Computadores II,P52,40,5,False,False,2,False,NOITE
-TCC00336,Bancos de Dados Nao Convencionais,P53,35,6,False,False,2,True,NOITE
-TCC00337,Introducao a Interacao Humano-Computador,P54,35,6,False,False,2,False,NOITE
-TCC00330,Modelagem de Processos de Negocios,P55,40,6,False,False,2,False,NOITE
-TCC00338,Projeto de Software,P56,40,6,False,False,2,False,NOITE
-TCC00340,Desenvolvimento de Aplicacoes Corporativas,P57,35,7,False,False,2,False,NOITE
-TCC00339,Gerencia de Projetos e Manutencao de Software,P58,35,7,False,False,2,False,NOITE
-TCC00341,Seguranca da Informacao,P59,40,7,False,False,2,False,NOITE
+id,nome,turma,vaga,aulas_semanais,turno,lab,id_professor,curso,periodo
+TCC00284,Algoritmo em Grafos,A1,60,2,Matutino,False,,,
+TCC00285,Análise e Projeto de Algoritmos,A1,58,2,Matutino,False,,,
+TCC00285,Análise e Projeto de Algoritmos,B1,58,2,Matutino,False,,,
+TCC00286,Arquiteturas de Computadores,A1,66,2,Matutino,False,,,
+TCC00349,Avaliação de Desempenho,A1,60,2,Matutino,False,,,
+TCC00287,Banco de Dados I,A1,63,2,Matutino,False,,,
+TCC00288,Banco de Dados II,A1,84,2,Matutino,True,,,
+TCC00336,Banco de Dados Não Convencionais,A1,54,2,Noturno,False,,,
+TCC00336,Banco de Dados Não Convencionais,Z1,59,2,Noturno,False,,,
+TCC00289,Compiladores,A1,61,2,Matutino,False,,,
+TCC00280,Computação e Meio Ambiente,A1,35,2,Vespertino,False,,,
+TCC00290,Computação e Sociedade,A1,70,2,Matutino,False,,,
+TCC00222,Computação e Sociedade Para Sistemas de Informação,A1,48,2,Noturno,False,,,
+TCC00291,Computação Gráfica,A1,51,2,Matutino,False,,,
+TCC00226,Desenvolvimento Web,A1,60,2,Matutino,True,,,
+TCC00226,Desenvolvimento Web,X1,45,2,Matutino,True,,,
+TCC00255,Engenharia de Software,A1,54,2,Noturno,False,,,
+TCC00292,Engenharia de Software I,A1,66,2,Matutino,False,,,
+TCC00293,Engenharia de Software II,A1,61,2,Matutino,False,,,
+TCC00319,Estrutura de Dados,A1,60,2,Vespertino,False,,,
+TCC00319,Estrutura de Dados,B1,48,2,Vespertino,False,,,
+TCC00348,Estrutura de Dados e Seus Algoritmos,A1,52,2,Matutino,False,,,
+TCC00348,Estrutura de Dados e Seus Algoritmos,B1,41,2,Matutino,False,,,
+TCC00331,Estrutura de Dados Para Sistemas de Informação,A1,45,2,Noturno,False,,,
+TCC00331,Estrutura de Dados Para Sistemas de Informação,B1,45,2,Noturno,False,,,
+TCC00296,Fundamentos de Arquiteturas de Computadores,A1,64,2,Vespertino,False,,,
+TCC00296,Fundamentos de Arquiteturas de Computadores,B1,54,2,Matutino,False,,,
+TCC00332,Fundamentos de Sistemas de Informação,A1,43,2,Noturno,False,,,
+TCC00332,Fundamentos de Sistemas de Informação,B1,40,2,Noturno,False,,,
+TCC00354,Fundamentos Matemáticos para Computação,A1,50,2,Noturno,False,,,
+TCC00354,Fundamentos Matemáticos para Computação,B1,46,2,Noturno,False,,,
+TCC00363,Gerência de Projeto e Manutenção de Software,A1,54,2,Noturno,False,,,
+TCC00324,Governança em Tecnologia da Informação,A1,54,2,Noturno,False,,,
+TCC00324,Governança em Tecnologia da Informação,Z1,3,2,Noturno,False,,,
+TCC00297,Inteligência Artificial,A1,68,2,Matutino,False,,,
+TCC00298,Interface Homem-Máquina,A1,62,2,Matutino,False,,,
+TCC00337,Introdução à Interação Humano-Computador,A1,57,2,Noturno,False,,,
+TCC00320,Introdução a Projeto de Banco de Dados,A1,46,2,Vespertino,False,,,
+TCC00320,Introdução a Projeto de Banco de Dados,B1,41,2,Vespertino,False,,,
+TCC00361,Introdução ao Desenvolvimento Web,A1,41,2,Noturno,True,,,
+TCC00301,Laboratório de Programação de Jogos,AA,35,1,Matutino,True,,,
+TCC00301,Laboratório de Programação de Jogos,BA,44,1,Matutino,True,,,
+TCC00344,Laboratório de Programação Paralela I,AA,60,2,Matutino,True,,,
+TCC00346,Laboratório de Resolução de Problemas,AA,35,1,Vespertino,True,,,
+TCC00346,Laboratório de Resolução de Problemas,BA,35,1,Vespertino,True,,,
+TCC00355,Laboratório de Resolução de Problemas,EA,45,2,Noturno,True,,,
+TCC00355,Laboratório de Resolução de Problemas,FA,45,2,Noturno,True,,,
+TCC00304,Linguagens de Programação,A1,68,2,Matutino,False,,,
+TCC00205,Linguagens de Programação em Lógica,A1,20,2,Vespertino,False,,,
+TCC00305,Linguagens Formais e Teoria da Computação,A1,70,2,Matutino,False,,,
+TCC00195,Metaheurísticas,A1,15,2,Matutino,False,,,
+TCC00330,Modelagem de Processos de Negócios,A1,51,2,Noturno,False,,,
+TCC00306,Métodos Numéricos,A1,46,2,Matutino,False,,,
+TCC00325,Métodos Numéricos,A1,53,2,Matutino,False,,,
+TCC00325,Métodos Numéricos,B1,55,2,Matutino,False,,,
+TCC00325,Métodos Numéricos,C1,55,2,Vespertino,False,,,
+TCC00325,Métodos Numéricos,D1,60,2,Noturno,False,,,
+TCC00325,Métodos Numéricos,E1,60,2,Matutino,False,,,
+TCC00325,Métodos Numéricos,F1,61,2,Vespertino,False,,,
+TCC00325,Métodos Numéricos,G1,46,2,Vespertino,False,,,
+TCC00318,Pesquisa Operacional,A1,60,2,Matutino,False,,,
+TCC00368,Pesquisa Operacional para Sistemas de Informação,A1,61,2,Noturno,False,,,
+TCC00334,Princípios de Banco de Dados,A1,64,2,Noturno,False,,,
+TCC00307,Programação Científica,A1,59,2,Matutino,False,,,
+TCC00307,Programação Científica,Z1,1,2,Vespertino,False,,,
+TCC00326,Programação de Computadores,D1,54,2,Vespertino,False,,,
+TCC00326,Programação de Computadores,D2,58,2,Vespertino,False,,,
+TCC00326,Programação de Computadores,E1,66,2,Noturno,False,,,
+TCC00326,Programação de Computadores,F1,46,2,Matutino,False,,,
+TCC00326,Programação de Computadores,F2,52,2,Matutino,False,,,
+TCC00326,Programação de Computadores,F3,52,2,Matutino,False,,,
+TCC00326,Programação de Computadores,G1,66,2,Matutino,False,,,
+TCC00326,Programação de Computadores,G2,53,2,Matutino,False,,,
+TCC00326,Programação de Computadores,G3,58,2,Matutino,False,,,
+TCC00326,Programação de Computadores,G4,51,2,Matutino,False,,,
+TCC00326,Programação de Computadores,H1,51,2,Vespertino,False,,,
+TCC00326,Programação de Computadores,H2,47,2,Vespertino,False,,,
+TCC00326,Programação de Computadores,H3,57,2,Vespertino,False,,,
+TCC00326,Programação de Computadores,H4,58,2,Vespertino,False,,,
+TCC00326,Programação de Computadores,J1,61,2,Vespertino,False,,,
+TCC00326,Programação de Computadores,J2,54,2,Vespertino,False,,,
+TCC00308,Programação de Computadores I,A1,47,2,Noturno,False,,,
+TCC00366,Programação de Computadores I,A1,46,2,Noturno,False,,,
+TCC00308,Programação de Computadores I,B1,49,2,Vespertino,False,,,
+TCC00366,Programação de Computadores I,B1,45,2,Noturno,False,,,
+TCC00356,Programação de Computadores II,A1,46,2,Noturno,False,,,
+TCC00356,Programação de Computadores II,B1,46,2,Noturno,False,,,
+TCC00347,Programação Estruturada,A1,45,2,Matutino,False,,,
+TCC00347,Programação Estruturada,B1,47,2,Matutino,False,,,
+TCC00347,Programação Estruturada,X1,47,2,Matutino,False,,,
+TCC00328,Programação Orientada a Objetos,A1,60,2,Matutino,False,,,
+TCC00328,Programação Orientada a Objetos,B1,62,2,Vespertino,False,,,
+TCC00328,Programação Orientada a Objetos,C1,60,2,Matutino,False,,,
+TCC00357,Programação Orientada a Objetos I,A1,66,2,Noturno,False,,,
+TCC00335,Projeto de Banco de Dados para Sistemas de Informação,A1,58,2,Noturno,False,,,
+TCC00338,Projeto de Software,A1,52,2,Noturno,False,,,
+TCC00312,Projeto de Software,A1,61,2,Matutino,False,,,
+TCC00365,Qualidade e Teste de Software,A1,56,2,Noturno,False,,,
+TCC00359,Redes de Computadores,A1,71,2,Noturno,False,,,
+TCC00359,Redes de Computadores,Z1,21,2,Vespertino,False,,,
+TCC00313,Redes de Computadores I,A1,62,2,Matutino,False,,,
+TCC00314,Redes de Computadores II,A1,60,2,Matutino,False,,,
+TCC00341,Segurança da Informação,A1,53,2,Noturno,False,,,
+TCC00358,Sistemas Computacionais,A1,50,2,Noturno,False,,,
+TCC00358,Sistemas Computacionais,B1,50,2,Noturno,False,,,
+TCC00315,Sistemas Distribuídos,A1,62,2,Matutino,False,,,
+TCC00362,Sistemas Distribuídos para Sistemas de Informação,A1,60,2,Noturno,False,,,
+TCC00316,Sistemas Operacionais,A1,60,2,Matutino,False,,,
+TCC00271,Tópicos em Linguagem de Programação I,A1,36,2,Vespertino,False,,,
+TCC00244,Tópicos em Banco de Dados I,A1,40,2,Matutino,False,,,
+TCC00240,Tópicos em Ciência da Computação,A1,10,2,Noturno,False,,,
+TCC00241,Tópicos em Computação I,A1,21,2,Vespertino,False,,,
+TCC00242,Tópicos em Computação II,A1,43,2,Noturno,False,,,
+TCC00243,Tópicos em Computação III,Z1,1,2,Vespertino,False,,,
+TCC00250,Tópicos em Engenharia de Software I,A1,39,2,Matutino,False,,,
+TCC00251,Tópicos em Engenharia de Software II,A1,10,2,Matutino,False,,,
+TCC00259,Tópicos em Inteligência Artificial I,A1,30,2,Vespertino,False,,,
+TCC00260,Tópicos em Inteligência Artificial II,A1,24,2,Matutino,False,,,
+TCC04135,Tópicos em Matemática para Computação I,X1,2,2,Matutino,False,,,
+TCC00230,Tópicos Especiais em Segurança da Informação,A1,59,2,Matutino,False,,,
+TCC00253,Tópicos Especiais em Sistemas de Programação I,A1,46,2,Noturno,False,,,
+TCC00360,Visualização de Dados,A1,60,2,Noturno,False,,,
+TCC00202,Visualização Simulação e Jogos Digitais,X1,22,2,Matutino,False,,,
+TCC00371,Ética em Inteligência Artificial e Ciência de Dados,A1,31,2,Matutino,False,,,
