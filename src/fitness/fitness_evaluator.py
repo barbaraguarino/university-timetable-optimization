@@ -1,9 +1,9 @@
 from collections import defaultdict
-from typing import Dict
+from typing import Dict, Tuple, List
 from domain.cromossomo import Cromossomo
 from domain.professor import Professor
+from domain.gene import Gene
 import config
-
 
 class FitnessEvaluator:
 
@@ -11,22 +11,51 @@ class FitnessEvaluator:
         self.professores = professores
 
     def calcular_fitness(self, cromossomo: Cromossomo) -> int:
-        penalidade_total = 0
 
+        penalidade_total = 0
+        penalidades_disc = defaultdict(int)
+
+        (
+            alocacoes_por_horario,
+            alocacoes_por_docente_dia,
+            alocacoes_por_periodo_dia,
+            alocacoes_por_disciplina,
+            horarios_ruins_por_prof
+        ) = self._indexar_cromossomo(cromossomo)
+
+        for gene in cromossomo.genes:
+            disc_key = f"{gene.disciplina.id}_{gene.disciplina.turma}"
+
+            penalidade_gene = self._avaliar_regras_locais(gene)
+
+            penalidades_disc[disc_key] += penalidade_gene
+            penalidade_total += penalidade_gene
+
+        penalidade_total += self._avaliar_hc_por_horario(alocacoes_por_horario)
+        penalidade_total += self._avaliar_sc_distribuicao_semanal(alocacoes_por_disciplina)
+        penalidade_total += self._avaliar_sc_jornada_docente(alocacoes_por_docente_dia)
+        penalidade_total += self._avaliar_sc_jornada_aluno(alocacoes_por_periodo_dia)
+        penalidade_total += self._avaliar_sc_equidade(horarios_ruins_por_prof)
+
+        cromossomo.fitness = penalidade_total
+        cromossomo.disciplinas_problematicas = [
+            d_key for d_key, mult in sorted(penalidades_disc.items(), key=lambda item: item[1], reverse=True)
+            if mult > 0
+        ]
+
+        return penalidade_total
+
+    def _indexar_cromossomo(self, cromossomo: Cromossomo) -> Tuple:
         alocacoes_por_horario = defaultdict(list)
         alocacoes_por_docente_dia = defaultdict(list)
         alocacoes_por_periodo_dia = defaultdict(list)
         alocacoes_por_disciplina = defaultdict(list)
         horarios_ruins_por_prof = defaultdict(int)
 
-        penalidades_disc = defaultdict(int)
-
         for gene in cromossomo.genes:
             horario = gene.horario
             dia = horario.split("_")[0]
             disc = gene.disciplina
-            sala = gene.sala
-
             disc_key = f"{disc.id}_{disc.turma}"
 
             alocacoes_por_horario[horario].append(gene)
@@ -39,47 +68,38 @@ class FitnessEvaluator:
             if horario in config.HORARIOS_RUINS:
                 horarios_ruins_por_prof[disc.id_professor] += 1
 
-            penalidade_gene = 0
+        return (alocacoes_por_horario, alocacoes_por_docente_dia, alocacoes_por_periodo_dia,
+                alocacoes_por_disciplina, horarios_ruins_por_prof)
 
-            prof = self.professores.get(disc.id_professor)
-            if prof and not prof.is_disponivel(horario):
-                penalidade_gene += config.PESO_HARD
+    def _avaliar_regras_locais(self, gene: Gene) -> int:
+        penalidade = 0
+        disc = gene.disciplina
+        sala = gene.sala
+        horario = gene.horario
 
-            if disc.lab != sala.is_lab:
-                penalidade_gene += config.PESO_HARD
+        prof = self.professores.get(disc.id_professor)
+        if prof and not prof.is_disponivel(horario):
+            penalidade += config.PESO_HARD
 
-            if disc.turno == "MATUTINO" and horario not in config.TURNO_MATUTINO:
-                penalidade_gene += config.PESO_HARD
-            elif disc.turno == "VESPERTINO" and horario not in config.TURNO_VESPERTINO:
-                penalidade_gene += config.PESO_HARD
-            elif disc.turno == "NOTURNO" and horario not in config.TURNO_NOTURNO:
-                penalidade_gene += config.PESO_HARD
+        if disc.lab != sala.is_lab:
+            penalidade += config.PESO_HARD
 
-            excedente = disc.vaga - sala.capacidade_maxima
-            if excedente > 0:
-                penalidade_gene += (excedente ** 2) * config.PESO_ALUNO_EXCEDENTE
+        if disc.turno == "MATUTINO" and horario not in config.TURNO_MATUTINO:
+            penalidade += config.PESO_HARD
+        elif disc.turno == "VESPERTINO" and horario not in config.TURNO_VESPERTINO:
+            penalidade += config.PESO_HARD
+        elif disc.turno == "NOTURNO" and horario not in config.TURNO_NOTURNO:
+            penalidade += config.PESO_HARD
 
-            vazios = sala.capacidade_maxima - disc.vaga
-            if vazios > 20:
-                penalidade_gene += (vazios - 20) * config.PESO_CADEIRA_VAZIA
+        excedente = disc.vaga - sala.capacidade_maxima
+        if excedente > 0:
+            penalidade += (excedente ** 2) * config.PESO_ALUNO_EXCEDENTE
 
-            penalidades_disc[disc_key] += penalidade_gene
-            penalidade_total += penalidade_gene
+        vazios = sala.capacidade_maxima - disc.vaga
+        if vazios > 20:
+            penalidade += (vazios - 20) * config.PESO_CADEIRA_VAZIA
 
-        penalidade_total += self._avaliar_hc_por_horario(alocacoes_por_horario)
-        penalidade_total += self._avaliar_sc_distribuicao_semanal(alocacoes_por_disciplina)
-        penalidade_total += self._avaliar_sc_jornada_docente(alocacoes_por_docente_dia)
-        penalidade_total += self._avaliar_sc_jornada_aluno(alocacoes_por_periodo_dia)
-        penalidade_total += self._avaliar_sc_equidade(horarios_ruins_por_prof)
-
-        cromossomo.fitness = penalidade_total
-
-        cromossomo.disciplinas_problematicas = [
-            d_key for d_key, mult in sorted(penalidades_disc.items(), key=lambda item: item[1], reverse=True)
-            if mult > 0
-        ]
-
-        return penalidade_total
+        return penalidade
 
     def _avaliar_hc_por_horario(self, alocacoes_por_horario: dict) -> int:
         penalidade = 0
