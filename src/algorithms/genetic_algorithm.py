@@ -28,19 +28,19 @@ class GeneticAlgorithm:
     def _cruzamento(self, pai1: Cromossomo, pai2: Cromossomo) -> Cromossomo:
         genes_filho = []
         dict_pai1 = defaultdict(list)
-        for g in pai1.genes: dict_pai1[g.disciplina.id].append(g)
+        for g in pai1.genes: dict_pai1[f"{g.disciplina.id}_{g.disciplina.turma}"].append(g)
 
         dict_pai2 = defaultdict(list)
-        for g in pai2.genes: dict_pai2[g.disciplina.id].append(g)
+        for g in pai2.genes: dict_pai2[f"{g.disciplina.id}_{g.disciplina.turma}"].append(g)
 
-        for disc_id in dict_pai1.keys():
+        for disc_key in dict_pai1.keys():
             if random.random() < 0.5:
-                genes_filho.extend(copy.deepcopy(dict_pai1[disc_id]))
+                genes_filho.extend(copy.deepcopy(dict_pai1[disc_key]))
             else:
-                genes_filho.extend(copy.deepcopy(dict_pai2[disc_id]))
+                genes_filho.extend(copy.deepcopy(dict_pai2[disc_key]))
 
         cromossomo_filho = Cromossomo(genes=genes_filho)
-        cromossomo_filho.genes.sort(key=lambda g: g.disciplina.id)
+        cromossomo_filho.genes.sort(key=lambda g: f"{g.disciplina.id}_{g.disciplina.turma}")
         return cromossomo_filho
 
     def _mutacao_hibrida(self, cromossomo: Cromossomo, salas: List[Sala]):
@@ -48,16 +48,25 @@ class GeneticAlgorithm:
         top_problematicos = set(problematicos[:10])
 
         for gene in cromossomo.genes:
-            is_problematico = gene.disciplina.id in top_problematicos
+            disc_key = f"{gene.disciplina.id}_{gene.disciplina.turma}"
+            is_problematico = disc_key in top_problematicos
 
             chance = self.taxa_mutacao * 5 if is_problematico else self.taxa_mutacao
 
             if random.random() < chance:
                 if random.random() < 0.5:
-                    horarios_permitidos = config.TURNOS_NOITE if gene.disciplina.turno_curso == "NOITE" else config.HORARIOS_DISPONIVEIS
+                    if gene.disciplina.turno == "MATUTINO":
+                        horarios_permitidos = config.TURNO_MATUTINO
+                    elif gene.disciplina.turno == "VESPERTINO":
+                        horarios_permitidos = config.TURNO_VESPERTINO
+                    elif gene.disciplina.turno == "NOTURNO":
+                        horarios_permitidos = config.TURNO_NOTURNO
+                    else:
+                        horarios_permitidos = config.HORARIOS_DISPONIVEIS
+
                     gene.horario = random.choice(horarios_permitidos)
                 else:
-                    salas_compativeis = [s for s in salas if s.is_lab == gene.disciplina.needs_lab]
+                    salas_compativeis = [s for s in salas if s.is_lab == gene.disciplina.lab]
                     if salas_compativeis:
                         gene.sala = random.choice(salas_compativeis)
 
@@ -73,7 +82,7 @@ class GeneticAlgorithm:
             gene1 = cromossomo.genes[idx1]
             gene2 = cromossomo.genes[idx2]
 
-            if gene1.disciplina.turno_curso == gene2.disciplina.turno_curso and gene1.disciplina.needs_lab == gene2.disciplina.needs_lab:
+            if gene1.disciplina.turno == gene2.disciplina.turno and gene1.disciplina.lab == gene2.disciplina.lab:
 
                 gene1.horario, gene2.horario = gene2.horario, gene1.horario
                 gene1.sala, gene2.sala = gene2.sala, gene1.sala

@@ -20,16 +20,14 @@ class Grasp:
                                  dias_alocados: set, prof_aulas_dia: int) -> int:
         custo = 0
 
-        excedente = disciplina.numero_alunos - sala.capacidade_maxima
+        # 1. Capacidade Física
+        excedente = disciplina.vaga - sala.capacidade_maxima
         if excedente > 0:
             custo += (excedente ** 2) * config.PESO_ALUNO_EXCEDENTE
 
-        vazios = sala.capacidade_maxima - disciplina.numero_alunos
+        vazios = sala.capacidade_maxima - disciplina.vaga
         if vazios > 20:
             custo += (vazios - 20) * config.PESO_CADEIRA_VAZIA
-
-        if disciplina.prefere_sala_grande and sala.capacidade_maxima < 60:
-            custo += config.PESO_SALA_PEQUENA
 
         dia_semana = horario.split("_")[0]
         if dia_semana in dias_alocados:
@@ -40,9 +38,6 @@ class Grasp:
 
         if horario in config.HORARIOS_RUINS:
             custo += config.PESO_HORARIO_RUIM
-
-        if disciplina.turno_curso == "INTEGRAL" and disciplina.periodo >= 5 and horario not in config.TURNOS_MANHA:
-            custo += config.PESO_TURNO_INCORRETO
 
         return custo
 
@@ -64,7 +59,14 @@ class Grasp:
             for _ in range(disciplina.aulas_semanais):
                 candidatos = []
 
-                horarios_permitidos = config.TURNOS_NOITE if disciplina.turno_curso == "NOITE" else config.HORARIOS_DISPONIVEIS
+                if disciplina.turno == "MATUTINO":
+                    horarios_permitidos = config.TURNO_MATUTINO
+                elif disciplina.turno == "VESPERTINO":
+                    horarios_permitidos = config.TURNO_VESPERTINO
+                elif disciplina.turno == "NOTURNO":
+                    horarios_permitidos = config.TURNO_NOTURNO
+                else:
+                    horarios_permitidos = config.HORARIOS_DISPONIVEIS
 
                 for horario in horarios_permitidos:
                     if horario in config.HORARIOS_PROIBIDOS: continue
@@ -73,15 +75,16 @@ class Grasp:
                     if prof and not prof.is_disponivel(horario): continue
                     if disciplina.id_professor in professores_ocupados[horario]: continue
 
-                    chave_periodo = (disciplina.periodo, disciplina.turno_curso)
-                    if chave_periodo in periodos_ocupados[horario]: continue
+                    if disciplina.periodo is not None and disciplina.curso is not None:
+                        chave_periodo = (disciplina.periodo, disciplina.curso)
+                        if chave_periodo in periodos_ocupados[horario]: continue
 
                     dia_semana = horario.split("_")[0]
                     aulas_prof_neste_dia = prof_aulas_dia.get(disciplina.id_professor, {}).get(dia_semana, 0)
 
                     for sala in self.salas:
                         if sala.id not in salas_ocupadas[horario]:
-                            if disciplina.needs_lab == sala.is_lab:
+                            if disciplina.lab == sala.is_lab:
                                 custo = self._calcular_custo_insercao(
                                     disciplina, horario, sala, dias_alocados, aulas_prof_neste_dia
                                 )
@@ -89,14 +92,12 @@ class Grasp:
 
                 if candidatos:
                     candidatos.sort(key=lambda x: x[0])
-
                     tamanho_rcl_real = min(self.tamanho_rcl, len(candidatos))
                     rcl = candidatos[:tamanho_rcl_real]
-
                     _, horario_escolhido, sala_escolhida = random.choice(rcl)
                 else:
                     horario_escolhido = random.choice(horarios_permitidos)
-                    salas_compativeis = [s for s in self.salas if s.is_lab == disciplina.needs_lab]
+                    salas_compativeis = [s for s in self.salas if s.is_lab == disciplina.lab]
                     sala_escolhida = random.choice(salas_compativeis) if salas_compativeis else random.choice(
                         self.salas)
 
@@ -105,7 +106,9 @@ class Grasp:
 
                 salas_ocupadas[horario_escolhido].add(sala_escolhida.id)
                 professores_ocupados[horario_escolhido].add(disciplina.id_professor)
-                periodos_ocupados[horario_escolhido].add((disciplina.periodo, disciplina.turno_curso))
+
+                if disciplina.periodo is not None and disciplina.curso is not None:
+                    periodos_ocupados[horario_escolhido].add((disciplina.periodo, disciplina.curso))
 
                 dia_escolhido = horario_escolhido.split("_")[0]
                 dias_alocados.add(dia_escolhido)
@@ -113,7 +116,7 @@ class Grasp:
                     prof_aulas_dia[disciplina.id_professor][dia_escolhido] += 1
 
         cromossomo = Cromossomo(genes=genes)
-        cromossomo.genes.sort(key=lambda g: g.disciplina.id)
+        cromossomo.genes.sort(key=lambda g: f"{g.disciplina.id}_{g.disciplina.turma}")
 
         return cromossomo
 

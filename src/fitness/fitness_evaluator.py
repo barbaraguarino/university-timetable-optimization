@@ -27,10 +27,14 @@ class FitnessEvaluator:
             disc = gene.disciplina
             sala = gene.sala
 
+            disc_key = f"{disc.id}_{disc.turma}"
+
             alocacoes_por_horario[horario].append(gene)
             alocacoes_por_docente_dia[(disc.id_professor, dia)].append(gene)
-            alocacoes_por_periodo_dia[(disc.periodo, dia)].append(gene)
-            alocacoes_por_disciplina[disc.id].append(gene)
+            alocacoes_por_disciplina[disc_key].append(gene)
+
+            if disc.periodo is not None and disc.curso is not None:
+                alocacoes_por_periodo_dia[(disc.periodo, disc.curso, dia)].append(gene)
 
             if horario in config.HORARIOS_RUINS:
                 horarios_ruins_por_prof[disc.id_professor] += 1
@@ -41,27 +45,25 @@ class FitnessEvaluator:
             if prof and not prof.is_disponivel(horario):
                 penalidade_gene += config.PESO_HARD
 
-            if disc.needs_lab != sala.is_lab:
+            if disc.lab != sala.is_lab:
                 penalidade_gene += config.PESO_HARD
 
-            if disc.turno_curso == "NOITE" and horario not in config.TURNOS_NOITE:
+            if disc.turno == "MATUTINO" and horario not in config.TURNO_MATUTINO:
+                penalidade_gene += config.PESO_HARD
+            elif disc.turno == "VESPERTINO" and horario not in config.TURNO_VESPERTINO:
+                penalidade_gene += config.PESO_HARD
+            elif disc.turno == "NOTURNO" and horario not in config.TURNO_NOTURNO:
                 penalidade_gene += config.PESO_HARD
 
-            excedente = disc.numero_alunos - sala.capacidade_maxima
+            excedente = disc.vaga - sala.capacidade_maxima
             if excedente > 0:
                 penalidade_gene += (excedente ** 2) * config.PESO_ALUNO_EXCEDENTE
 
-            vazios = sala.capacidade_maxima - disc.numero_alunos
+            vazios = sala.capacidade_maxima - disc.vaga
             if vazios > 20:
                 penalidade_gene += (vazios - 20) * config.PESO_CADEIRA_VAZIA
 
-            if disc.prefere_sala_grande and sala.capacidade_maxima < 60:
-                penalidade_gene += config.PESO_SALA_PEQUENA
-
-            if disc.turno_curso == "INTEGRAL" and disc.periodo >= 5 and horario not in config.TURNOS_MANHA:
-                penalidade_gene += config.PESO_TURNO_INCORRETO
-
-            penalidades_disc[disc.id] += penalidade_gene
+            penalidades_disc[disc_key] += penalidade_gene
             penalidade_total += penalidade_gene
 
         penalidade_total += self._avaliar_hc_por_horario(alocacoes_por_horario)
@@ -73,7 +75,7 @@ class FitnessEvaluator:
         cromossomo.fitness = penalidade_total
 
         cromossomo.disciplinas_problematicas = [
-            d_id for d_id, mult in sorted(penalidades_disc.items(), key=lambda item: item[1], reverse=True)
+            d_key for d_key, mult in sorted(penalidades_disc.items(), key=lambda item: item[1], reverse=True)
             if mult > 0
         ]
 
@@ -98,10 +100,11 @@ class FitnessEvaluator:
                     penalidade += config.PESO_HARD
                 salas_vistas.add(gene.sala.id)
 
-                chave_periodo = (gene.disciplina.periodo, gene.disciplina.turno_curso)
-                if chave_periodo in periodos_vistos:
-                    penalidade += config.PESO_HARD
-                periodos_vistos.add(chave_periodo)
+                if gene.disciplina.periodo is not None and gene.disciplina.curso is not None:
+                    chave_periodo = (gene.disciplina.periodo, gene.disciplina.curso)
+                    if chave_periodo in periodos_vistos:
+                        penalidade += config.PESO_HARD
+                    periodos_vistos.add(chave_periodo)
         return penalidade
 
     def _avaliar_sc_distribuicao_semanal(self, alocacoes_por_disciplina: dict) -> int:
