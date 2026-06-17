@@ -49,15 +49,6 @@ python src/main.py
 
 ```
 
-### Rodando os Testes Automatizados
-
-Para garantir que as regras matemáticas da função de *fitness* estão corretas e sem regressões, execute a suíte de testes:
-
-```bash
-python -m unittest discover -s tests
-
-```
-
 ## Autoria
 
 Desenvolvido por **Barbara Carvalho** como requisito avaliativo da disciplina de Pesquisa Operacional.
