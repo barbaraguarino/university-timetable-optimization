@@ -84,7 +84,7 @@ class FitnessEvaluator:
 
         for gene in cromossomo.genes:
             horario = gene.horario
-            dia = horario.split("_")[0]
+            dia = horario // 7
             disc = gene.disciplina
             disc_key = f"{disc.id}_{disc.turma}"
 
@@ -133,7 +133,7 @@ class FitnessEvaluator:
         penalidade = 0
         for genes_da_disc in alocacoes_por_disciplina.values():
             if len(genes_da_disc) > 1:
-                dias = [config.DIAS_DA_SEMANA[g.horario.split("_")[0]] for g in genes_da_disc]
+                dias = [g.horario // 7 for g in genes_da_disc]
                 dias.sort()
                 for i in range(len(dias) - 1):
                     distancia = dias[i + 1] - dias[i]
@@ -180,11 +180,12 @@ class FitnessEvaluator:
             disc = gene.disciplina
             sala = gene.sala
             horario = gene.horario
+            horario_str = config.id_to_str(horario)
             prof = self.professores.get(disc.id_professor)
 
             if prof and not prof.is_disponivel(horario):
                 relatorio.append({"Tipo": "HARD", "Regra": "Prof. Indisponível", "Disciplina": disc.nome,
-                                  "Detalhe": f"Prof: {prof.nome} em {horario}", "Pontos": config.PESO_HARD})
+                                  "Detalhe": f"Prof: {prof.nome} em {horario_str}", "Pontos": config.PESO_HARD})
             if disc.lab != sala.is_lab:
                 relatorio.append({"Tipo": "HARD", "Regra": "Incompatibilidade Lab", "Disciplina": disc.nome,
                                   "Detalhe": f"Requisita Lab: {disc.lab} | Sala: {sala.is_lab}",
@@ -192,13 +193,13 @@ class FitnessEvaluator:
 
             if disc.turno == "MATUTINO" and horario not in config.TURNO_MATUTINO:
                 relatorio.append({"Tipo": "HARD", "Regra": "Turno Incorreto", "Disciplina": disc.nome,
-                                  "Detalhe": f"Alocada {horario}", "Pontos": config.PESO_HARD})
+                                  "Detalhe": f"Alocada {horario_str}", "Pontos": config.PESO_HARD})
             elif disc.turno == "VESPERTINO" and horario not in config.TURNO_VESPERTINO:
                 relatorio.append({"Tipo": "HARD", "Regra": "Turno Incorreto", "Disciplina": disc.nome,
-                                  "Detalhe": f"Alocada {horario}", "Pontos": config.PESO_HARD})
+                                  "Detalhe": f"Alocada {horario_str}", "Pontos": config.PESO_HARD})
             elif disc.turno == "NOTURNO" and horario not in config.TURNO_NOTURNO:
                 relatorio.append({"Tipo": "HARD", "Regra": "Turno Incorreto", "Disciplina": disc.nome,
-                                  "Detalhe": f"Alocada {horario}", "Pontos": config.PESO_HARD})
+                                  "Detalhe": f"Alocada {horario_str}", "Pontos": config.PESO_HARD})
 
             excedente = disc.vaga - sala.capacidade_maxima
             if excedente > 0:
@@ -213,9 +214,10 @@ class FitnessEvaluator:
                                   "Pontos": (vazios - 20) * config.PESO_CADEIRA_VAZIA})
 
         for horario, genes in alocacoes_por_horario.items():
+            horario_str = config.id_to_str(horario)
             if horario in config.HORARIOS_PROIBIDOS:
                 relatorio.append(
-                    {"Tipo": "HARD", "Regra": "Horário Proibido", "Disciplina": "Várias", "Detalhe": horario,
+                    {"Tipo": "HARD", "Regra": "Horário Proibido", "Disciplina": "Várias", "Detalhe": horario_str,
                      "Pontos": config.PESO_HARD * len(genes)})
 
             professores_vistos = set()
@@ -226,12 +228,12 @@ class FitnessEvaluator:
                 if gene.disciplina.id_professor in professores_vistos:
                     relatorio.append(
                         {"Tipo": "HARD", "Regra": "Choque de Professor", "Disciplina": gene.disciplina.nome,
-                         "Detalhe": f"Prof: {gene.disciplina.id_professor} em {horario}", "Pontos": config.PESO_HARD})
+                         "Detalhe": f"Prof: {gene.disciplina.id_professor} em {horario_str}", "Pontos": config.PESO_HARD})
                 professores_vistos.add(gene.disciplina.id_professor)
 
                 if gene.sala.id in salas_vistas:
                     relatorio.append({"Tipo": "HARD", "Regra": "Choque de Sala", "Disciplina": gene.disciplina.nome,
-                                      "Detalhe": f"Sala: {gene.sala.id} em {horario}", "Pontos": config.PESO_HARD})
+                                      "Detalhe": f"Sala: {gene.sala.id} em {horario_str}", "Pontos": config.PESO_HARD})
                 salas_vistas.add(gene.sala.id)
 
                 if gene.disciplina.periodo is not None and gene.disciplina.curso is not None:
@@ -239,12 +241,12 @@ class FitnessEvaluator:
                     if chave_periodo in periodos_vistos:
                         relatorio.append(
                             {"Tipo": "HARD", "Regra": "Choque de Turma", "Disciplina": gene.disciplina.nome,
-                             "Detalhe": f"Turma {chave_periodo} em {horario}", "Pontos": config.PESO_HARD})
+                             "Detalhe": f"Turma {chave_periodo} em {horario_str}", "Pontos": config.PESO_HARD})
                     periodos_vistos.add(chave_periodo)
 
         for genes_da_disc in alocacoes_por_disciplina.values():
             if len(genes_da_disc) > 1:
-                dias = [config.DIAS_DA_SEMANA[g.horario.split("_")[0]] for g in genes_da_disc]
+                dias = [g.horario // 7 for g in genes_da_disc]
                 dias.sort()
                 for i in range(len(dias) - 1):
                     distancia = dias[i + 1] - dias[i]
@@ -260,19 +262,21 @@ class FitnessEvaluator:
         for (id_prof, dia), genes_no_dia in alocacoes_por_docente_dia.items():
             qtd_aulas = len(genes_no_dia)
             if qtd_aulas > 2:
+                dia_str = config.DIAS_NOME[dia]
                 relatorio.append({"Tipo": "SOFT", "Regra": "Fadiga Docente", "Disciplina": "Várias",
-                                  "Detalhe": f"Prof {id_prof} com {qtd_aulas} aulas na {dia}",
+                                  "Detalhe": f"Prof {id_prof} com {qtd_aulas} aulas na {dia_str}",
                                   "Pontos": ((qtd_aulas - 2) ** 2) * config.PESO_FADIGA_DOCENTE})
 
         for (periodo, curso, turma, dia), genes_no_dia in alocacoes_por_periodo_dia.items():
             qtd_aulas = len(genes_no_dia)
+            dia_str = config.DIAS_NOME[dia]
             if qtd_aulas > 3:
                 relatorio.append({"Tipo": "SOFT", "Regra": "Sobrecarga Discente", "Disciplina": "Várias",
-                                  "Detalhe": f"Turma {curso}-{periodo}-{turma} com {qtd_aulas} aulas na {dia}",
+                                  "Detalhe": f"Turma {curso}-{periodo}-{turma} com {qtd_aulas} aulas na {dia_str}",
                                   "Pontos": ((qtd_aulas - 3) ** 2) * config.PESO_SOBRECARGA_ALUNO})
             if qtd_aulas >= 2:
                 relatorio.append({"Tipo": "SOFT", "Regra": "Janela Ociosa", "Disciplina": "Várias",
-                                  "Detalhe": f"Turma {curso}-{periodo}-{turma} teve janelas na {dia}",
+                                  "Detalhe": f"Turma {curso}-{periodo}-{turma} teve janelas na {dia_str}",
                                   "Pontos": (qtd_aulas - 1) * config.PESO_JANELA_OCIOSA})
 
         return relatorio

@@ -6,10 +6,10 @@ from fitness.fitness_evaluator import FitnessEvaluator
 from algorithms.grasp import Grasp
 from algorithms.genetic_algorithm import GeneticAlgorithm
 from domain.cromossomo import Cromossomo
+import config
 
 
 def _criar_diretorio_resultados() -> Path:
-    """Cria o diretório 'resultados' na raiz do projeto, caso ele não exista."""
     dir_raiz = Path(__file__).resolve().parent.parent
     dir_resultados = dir_raiz / "resultados"
 
@@ -17,10 +17,9 @@ def _criar_diretorio_resultados() -> Path:
     return dir_resultados
 
 def _salvar_grade_horarios(cromossomo: Cromossomo, professores: dict, caminho_arquivo: Path) -> None:
-    dias_ordem = {"Segunda": 1, "Terca": 2, "Quarta": 3, "Quinta": 4, "Sexta": 5}
     genes_ordenados = sorted(
         cromossomo.genes,
-        key=lambda g: (dias_ordem.get(g.horario.split('_')[0], 99), g.horario.split('_')[1])
+        key=lambda g: g.horario
     )
 
     with open(caminho_arquivo, mode='w', encoding='utf-8', newline='') as f:
@@ -37,7 +36,7 @@ def _salvar_grade_horarios(cromossomo: Cromossomo, professores: dict, caminho_ar
                 gene.disciplina.turma,
                 nome_professor,
                 gene.sala.id,
-                gene.horario
+                config.id_to_str(gene.horario)
             ])
 
 def _salvar_historico_fitness(historico: list, caminho_arquivo: Path) -> None:

@@ -1,4 +1,5 @@
 import csv
+import config
 from pathlib import Path
 from domain.professor import Professor
 from domain.sala import Sala
@@ -16,13 +17,14 @@ class DataLoader:
         with open(caminho_arquivo, mode='r', encoding='utf-8') as file:
             leitor_csv = csv.DictReader(file)
             for linha in leitor_csv:
-                indisponibilidades = linha['horarios_indisponiveis'].split(';') if linha[
+                indisponibilidades_str = linha['horarios_indisponiveis'].split(';') if linha[
                     'horarios_indisponiveis'] else []
+                indisponibilidades_int = [config.str_to_id(h) for h in indisponibilidades_str if h]
 
                 prof = Professor(
                     id=linha['id'],
                     nome=linha['nome'],
-                    horarios_indisponiveis=indisponibilidades
+                    horarios_indisponiveis=indisponibilidades_int
                 )
                 professores[prof.id] = prof
 

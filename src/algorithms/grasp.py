@@ -7,7 +7,7 @@ from domain.gene import Gene
 from domain.cromossomo import Cromossomo
 import config
 
-def _obter_horarios_permitidos(disciplina: Disciplina) -> List[str]:
+def _obter_horarios_permitidos(disciplina: Disciplina) -> List[int]:
     if disciplina.turno == "MATUTINO":
         return config.TURNO_MATUTINO
     elif disciplina.turno == "VESPERTINO":
@@ -16,7 +16,7 @@ def _obter_horarios_permitidos(disciplina: Disciplina) -> List[str]:
         return config.TURNO_NOTURNO
     return config.HORARIOS_DISPONIVEIS
 
-def _calcular_custo_insercao(disciplina: Disciplina, horario: str, sala: Sala,
+def _calcular_custo_insercao(disciplina: Disciplina, horario: int, sala: Sala,
                              dias_alocados: set, prof_aulas_dia: int) -> int:
     custo = 0
 
@@ -29,7 +29,7 @@ def _calcular_custo_insercao(disciplina: Disciplina, horario: str, sala: Sala,
     if vazios > 20:
         custo += (vazios - 20) * config.PESO_CADEIRA_VAZIA
 
-    dia_semana = horario.split("_")[0]
+    dia_semana = horario // 7
     if dia_semana in dias_alocados:
         custo += config.PESO_MESMO_DIA
 
@@ -51,7 +51,7 @@ def _atualizar_estado_ocupacao(estado: dict, gene: Gene, dias_alocados: set) -> 
     if disc.periodo is not None and disc.curso is not None:
         estado["periodos_ocupados"][h].add((disc.periodo, disc.curso, disc.turma))
 
-    dia_escolhido = h.split("_")[0]
+    dia_escolhido = h // 7
     dias_alocados.add(dia_escolhido)
 
     if disc.id_professor in estado["prof_aulas_dia"]:
@@ -75,7 +75,7 @@ class Grasp:
             "salas_ocupadas": {h: set() for h in config.HORARIOS_DISPONIVEIS},
             "professores_ocupados": {h: set() for h in config.HORARIOS_DISPONIVEIS},
             "periodos_ocupados": {h: set() for h in config.HORARIOS_DISPONIVEIS},
-            "prof_aulas_dia": {prof.id: {dia: 0 for dia in config.DIAS_DA_SEMANA.keys()} for prof in
+            "prof_aulas_dia": {prof.id: {dia: 0 for dia in config.DIAS_DA_SEMANA.values()} for prof in
                                self.professores.values()}
         }
 
@@ -104,8 +104,8 @@ class Grasp:
         cromossomo.genes.sort(key=lambda g: f"{g.disciplina.id}_{g.disciplina.turma}")
         return cromossomo
 
-    def _buscar_candidatos_validos(self, disciplina: Disciplina, horarios_permitidos: List[str],
-                                   estado: dict, dias_alocados: set) -> List[Tuple[int, str, Sala]]:
+    def _buscar_candidatos_validos(self, disciplina: Disciplina, horarios_permitidos: List[int],
+                                   estado: dict, dias_alocados: set) -> List[Tuple[int, int, Sala]]:
         candidatos = []
         prof = self.professores.get(disciplina.id_professor)
 
@@ -123,7 +123,8 @@ class Grasp:
                 if chave_periodo in estado["periodos_ocupados"][horario]:
                     continue
 
-            dia_semana = horario.split("_")[0]
+            # Matemática em vez de String Split!
+            dia_semana = horario // 7
             aulas_prof_neste_dia = estado["prof_aulas_dia"].get(disciplina.id_professor, {}).get(dia_semana, 0)
 
             for sala in self.salas:
@@ -134,14 +135,14 @@ class Grasp:
 
         return candidatos
 
-    def _escolher_via_rcl(self, candidatos: List[Tuple[int, str, Sala]]) -> Tuple[str, Sala]:
+    def _escolher_via_rcl(self, candidatos: List[Tuple[int, int, Sala]]) -> Tuple[int, Sala]:
         candidatos.sort(key=lambda x: x[0])
         tamanho_rcl_real = min(self.tamanho_rcl, len(candidatos))
         rcl = candidatos[:tamanho_rcl_real]
         _, horario_escolhido, sala_escolhida = random.choice(rcl)
         return horario_escolhido, sala_escolhida
 
-    def _aplicar_fallback(self, disciplina: Disciplina, horarios_permitidos: List[str], estado: dict) -> Tuple[str, Sala]:
+    def _aplicar_fallback(self, disciplina: Disciplina, horarios_permitidos: List[int], estado: dict) -> Tuple[int, Sala]:
         horarios_seguros = []
         for h in horarios_permitidos:
             prof_livre = disciplina.id_professor not in estado["professores_ocupados"][h]
