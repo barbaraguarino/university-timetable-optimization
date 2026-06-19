@@ -1,199 +1,199 @@
 Código,Disciplina,Turma,Professor,Sala,Horário
-TCC00226,Desenvolvimento Web,A1,Carlos Alberto Soares Ribeiro,L01,Segunda_07h
-TCC00291,Computação Gráfica,A1,Daniela Gorski Trevisan,S01,Segunda_07h
-TCC00292,Engenharia de Software I,A1,Débora Christina Muchaluat Saade,S02,Segunda_07h
-TCC00315,Sistemas Distribuídos,A1,Flávia Coimbra Delicato,S04,Segunda_07h
-TCC00348,Estrutura de Dados e Seus Algoritmos,A1,Isabel Cristina Mello Rosseti,S05,Segunda_07h
-TCC00195,Metaheurísticas,A1,Luis Antonio Brasil Kowada,S16,Segunda_09h
-TCC00202,Visualização Simulação e Jogos Digitais,X1,Leonardo Cruz da Costa,S21,Segunda_09h
-TCC00251,Tópicos em Engenharia de Software II,A1,Leonardo Gresta Paulino Murta,S13,Segunda_09h
-TCC00284,Algoritmo em Grafos,A1,Fábio Protti,S05,Segunda_09h
-TCC00287,Banco de Dados I,A1,Raquel Bravo,S01,Segunda_09h
-TCC00296,Fundamentos de Arquiteturas de Computadores,B1,André Renato Villela da Silva,S19,Segunda_09h
-TCC00301,Laboratório de Programação de Jogos,AA,Esteban Walter Gonzalez Clua,L06,Segunda_09h
-TCC00328,Programação Orientada a Objetos,A1,John Reed,S02,Segunda_09h
-TCC00347,Programação Estruturada,X1,Vanessa Braganholo Murta,S25,Segunda_09h
-TCC00349,Avaliação de Desempenho,A1,Flávio Seixas,S06,Segunda_09h
-TCC00371,Ética em Inteligência Artificial e Ciência de Dados,A1,Flavia Cristina Bernardini,S20,Segunda_09h
-TCC00293,Engenharia de Software II,A1,Leonardo Gresta Paulino Murta,S05,Segunda_11h
+TCC00285,Análise e Projeto de Algoritmos,B1,Loana Tito Nogueira,S04,Segunda_07h
+TCC00301,Laboratório de Programação de Jogos,AA,Esteban Walter Gonzalez Clua,L02,Segunda_07h
+TCC00304,Linguagens de Programação,A1,Bruno Lopes,S02,Segunda_07h
+TCC00312,Projeto de Software,A1,Vânia de Oliveira Neves,S03,Segunda_07h
+TCC00328,Programação Orientada a Objetos,A1,John Reed,S01,Segunda_07h
+TCC00244,Tópicos em Banco de Dados I,A1,Luiz André Portes Paes Leme,S08,Segunda_09h
+TCC00250,Tópicos em Engenharia de Software I,A1,Troy Costa Kohwalter,S09,Segunda_09h
+TCC00251,Tópicos em Engenharia de Software II,A1,Leonardo Gresta Paulino Murta,S12,Segunda_09h
+TCC00284,Algoritmo em Grafos,A1,Fábio Protti,S04,Segunda_09h
+TCC00287,Banco de Dados I,A1,Raquel Bravo,S03,Segunda_09h
+TCC00290,Computação e Sociedade,A1,Helena Cristina da Gama Leitão,S02,Segunda_09h
+TCC00306,Métodos Numéricos,A1,Eugene Francis Vinod Rebello,S07,Segunda_09h
+TCC00315,Sistemas Distribuídos,A1,Flávia Coimbra Delicato,S01,Segunda_09h
+TCC00344,Laboratório de Programação Paralela I,AA,Luciana Cardoso de Castro Salgado,L01,Segunda_09h
+TCC00347,Programação Estruturada,B1,Ricardo Leiderman,S15,Segunda_09h
+TCC00348,Estrutura de Dados e Seus Algoritmos,A1,Isabel Cristina Mello Rosseti,S06,Segunda_09h
+TCC04135,Tópicos em Matemática para Computação I,X1,Yuri Abitbol de Menezes Frota,S18,Segunda_09h
+TCC00230,Tópicos Especiais em Segurança da Informação,A1,Luis Antonio Brasil Kowada,S04,Segunda_11h
+TCC00288,Banco de Dados II,A1,Luiz André Portes Paes Leme,S02,Segunda_11h
+TCC00296,Fundamentos de Arquiteturas de Computadores,B1,André Renato Villela da Silva,S19,Segunda_11h
 TCC00298,Interface Homem-Máquina,A1,Antonio Augusto de Aragão Rocha,S01,Segunda_11h
-TCC00313,Redes de Computadores I,A1,Daniel Cardoso Moraes de Oliveira,S03,Segunda_11h
-TCC00316,Sistemas Operacionais,A1,Maria Cristina Silva Boeres,S02,Segunda_11h
-TCC00205,Linguagens de Programação em Lógica,A1,Andre Maues Brabo Pereira,S12,Segunda_16h
-TCC00243,Tópicos em Computação III,Z1,Débora Christina Muchaluat Saade,S14,Segunda_16h
-TCC00271,Tópicos em Linguagem de Programação I,A1,Luís Felipe Ignácio Cunha,S17,Segunda_16h
-TCC00319,Estrutura de Dados,B1,Vanessa Braganholo Murta,S23,Segunda_16h
-TCC00320,Introdução a Projeto de Banco de Dados,B1,Luiz André Portes Paes Leme,S05,Segunda_16h
-TCC00240,Tópicos em Ciência da Computação,A1,Helena Cristina da Gama Leitão,S21,Segunda_18h
-TCC00242,Tópicos em Computação II,A1,Carlos Alberto Soares Ribeiro,S11,Segunda_18h
-TCC00253,Tópicos Especiais em Sistemas de Programação I,A1,Aura Conci,S19,Segunda_18h
-TCC00308,Programação de Computadores I,A1,Loana Tito Nogueira,S23,Segunda_18h
-TCC00324,Governança em Tecnologia da Informação,Z1,Daniela Gorski Trevisan,S14,Segunda_18h
-TCC00331,Estrutura de Dados Para Sistemas de Informação,B1,Mario Roberto F. Benevides,S06,Segunda_18h
-TCC00334,Princípios de Banco de Dados,A1,Marcos Lage,S04,Segunda_18h
-TCC00355,Laboratório de Resolução de Problemas,EA,Ricardo Leiderman,L02,Segunda_18h
-TCC00356,Programação de Computadores II,B1,João Felipe Nicolaci Pimentel,S15,Segunda_18h
-TCC00358,Sistemas Computacionais,A1,Raquel Bravo,S01,Segunda_18h
-TCC00361,Introdução ao Desenvolvimento Web,A1,Pedro Cortez Fetter Lopes,L03,Segunda_18h
-TCC00362,Sistemas Distribuídos para Sistemas de Informação,A1,Luís Felipe Ignácio Cunha,S05,Segunda_18h
-TCC00363,Gerência de Projeto e Manutenção de Software,A1,Patrick Moratori,S02,Segunda_18h
+TCC00301,Laboratório de Programação de Jogos,BA,Esteban Walter Gonzalez Clua,L02,Segunda_11h
+TCC00241,Tópicos em Computação I,A1,Mariza Ferro,S12,Segunda_14h
+TCC00271,Tópicos em Linguagem de Programação I,A1,Luís Felipe Ignácio Cunha,S10,Segunda_14h
+TCC00296,Fundamentos de Arquiteturas de Computadores,A1,Aline Marins Paes Carvalho,S04,Segunda_14h
+TCC00359,Redes de Computadores,Z1,Eugene Francis Vinod Rebello,S14,Segunda_14h
+TCC00307,Programação Científica,Z1,José Viterbo Filho,S16,Segunda_16h
+TCC00319,Estrutura de Dados,B1,Vanessa Braganholo Murta,S15,Segunda_16h
+TCC00328,Programação Orientada a Objetos,B1,John Reed,S03,Segunda_16h
+TCC00346,Laboratório de Resolução de Problemas,AA,Fábio Protti,L03,Segunda_16h
+TCC00346,Laboratório de Resolução de Problemas,BA,Carlos Alberto Soares Ribeiro,L02,Segunda_16h
+TCC00242,Tópicos em Computação II,A1,Carlos Alberto Soares Ribeiro,S08,Segunda_18h
+TCC00253,Tópicos Especiais em Sistemas de Programação I,A1,Aura Conci,S09,Segunda_18h
+TCC00255,Tópicos Especiais em Sistemas de Programação III,A1,Helena Cristina da Gama Leitão,S01,Segunda_18h
+TCC00331,Estrutura de Dados Para Sistemas de Informação,B1,Mario Roberto F. Benevides,S10,Segunda_18h
+TCC00332,Fundamentos de Sistemas de Informação,B1,Patrick Moratori,S07,Segunda_18h
+TCC00334,Princípios de Banco de Dados,A1,Marcos Lage,S03,Segunda_18h
+TCC00338,Projeto de Software,A1,Luciana Cardoso de Castro Salgado,S06,Segunda_18h
+TCC00341,Segurança da Informação,A1,Luis Antonio Brasil Kowada,S20,Segunda_18h
+TCC00324,Governança em Tecnologia da Informação,A1,Lauro Eduardo Kozovits,S03,Segunda_20h
 TCC00336,Banco de Dados Não Convencionais,A1,Uéverton dos Santos Souza,S19,Segunda_20h
-TCC00336,Banco de Dados Não Convencionais,Z1,Luiz André Portes Paes Leme,S02,Segunda_20h
-TCC00341,Segurança da Informação,A1,Luis Antonio Brasil Kowada,S05,Segunda_20h
-TCC00357,Programação Orientada a Objetos I,A1,Rebeca Campos Motta,S01,Segunda_20h
-TCC00365,Qualidade e Teste de Software,A1,Vânia de Oliveira Neves,S06,Segunda_20h
-TCC00366,Programação de Computadores I,B1,Troy Costa Kohwalter,S23,Segunda_20h
-TCC00368,Pesquisa Operacional para Sistemas de Informação,A1,Ricardo Leiderman,S03,Segunda_20h
-TCC00226,Desenvolvimento Web,X1,Carlos Alberto Soares Ribeiro,L04,Terca_07h
-TCC00244,Tópicos em Banco de Dados I,A1,Luiz André Portes Paes Leme,S20,Terca_07h
-TCC00260,Tópicos em Inteligência Artificial II,A1,Taiane Coelho Ramos,S21,Terca_07h
-TCC00289,Compiladores,A1,Bruno Lopes,S03,Terca_07h
-TCC00307,Programação Científica,A1,Antonio Augusto de Aragão Rocha,S02,Terca_07h
-TCC00347,Programação Estruturada,B1,Ricardo Leiderman,S08,Terca_07h
-TCC00349,Avaliação de Desempenho,A1,Flávio Seixas,S05,Terca_07h
-TCC00250,Tópicos em Engenharia de Software I,A1,Troy Costa Kohwalter,S20,Terca_09h
-TCC00304,Linguagens de Programação,A1,Bruno Lopes,S01,Terca_09h
-TCC00312,Projeto de Software,A1,Vânia de Oliveira Neves,S03,Terca_09h
-TCC00318,Pesquisa Operacional,A1,Luiz Satoru Ochi,S04,Terca_09h
-TCC00347,Programação Estruturada,A1,Isabel Cristina Mello Rosseti,S07,Terca_09h
-TCC00290,Computação e Sociedade,A1,Helena Cristina da Gama Leitão,S02,Terca_11h
-TCC00306,Métodos Numéricos,A1,Eugene Francis Vinod Rebello,S23,Terca_11h
-TCC00314,Redes de Computadores II,A1,Flávia Coimbra Delicato,S03,Terca_11h
-TCC00328,Programação Orientada a Objetos,C1,Lauro Eduardo Kozovits,S05,Terca_11h
-TCC00280,Computação e Meio Ambiente,A1,Aura Conci,S16,Terca_14h
-TCC00296,Fundamentos de Arquiteturas de Computadores,A1,Aline Marins Paes Carvalho,S04,Terca_14h
-TCC00319,Estrutura de Dados,A1,Isabel Cristina Mello Rosseti,S02,Terca_14h
-TCC00328,Programação Orientada a Objetos,B1,John Reed,S03,Terca_14h
-TCC00359,Redes de Computadores,Z1,Eugene Francis Vinod Rebello,S21,Terca_14h
-TCC00241,Tópicos em Computação I,A1,Mariza Ferro,S13,Terca_16h
-TCC00307,Programação Científica,Z1,José Viterbo Filho,S12,Terca_16h
-TCC00308,Programação de Computadores I,B1,Andre Maues Brabo Pereira,S19,Terca_16h
-TCC00346,Laboratório de Resolução de Problemas,BA,Carlos Alberto Soares Ribeiro,L03,Terca_16h
-TCC00330,Modelagem de Processos de Negócios,A1,Rodrigo S. Monteiro,S19,Terca_18h
-TCC00354,Fundamentos Matemáticos para Computação,A1,Troy Costa Kohwalter,S06,Terca_18h
-TCC00354,Fundamentos Matemáticos para Computação,B1,Anselmo Antunes Montenegro,S22,Terca_18h
-TCC00355,Laboratório de Resolução de Problemas,FA,José Viterbo Filho,L03,Terca_18h
-TCC00356,Programação de Computadores II,A1,Rebeca Campos Motta,S25,Terca_18h
-TCC00359,Redes de Computadores,A1,Flavia Cristina Bernardini,S01,Terca_18h
-TCC00222,Computação e Sociedade Para Sistemas de Informação,A1,Taiane Coelho Ramos,S03,Terca_20h
-TCC00331,Estrutura de Dados Para Sistemas de Informação,A1,Mariza Ferro,S20,Terca_20h
-TCC00335,Projeto de Banco de Dados para Sistemas de Informação,A1,Luiz André Portes Paes Leme,S04,Terca_20h
-TCC00338,Projeto de Software,A1,Luciana Cardoso de Castro Salgado,S02,Terca_20h
+TCC00354,Fundamentos Matemáticos para Computação,A1,Troy Costa Kohwalter,S08,Segunda_20h
+TCC00355,Laboratório de Resolução de Problemas,FA,José Viterbo Filho,L01,Segunda_20h
+TCC00356,Programação de Computadores II,B1,João Felipe Nicolaci Pimentel,S20,Segunda_20h
+TCC00358,Sistemas Computacionais,A1,Raquel Bravo,S02,Segunda_20h
+TCC00362,Sistemas Distribuídos para Sistemas de Informação,A1,Luís Felipe Ignácio Cunha,S01,Segunda_20h
+TCC00363,Gerência de Projeto e Manutenção de Software,A1,Patrick Moratori,S06,Segunda_20h
+TCC00202,Visualização Simulação e Jogos Digitais,X1,Leonardo Cruz da Costa,S16,Terca_07h
+TCC00288,Banco de Dados II,A1,Luiz André Portes Paes Leme,S02,Terca_07h
+TCC00289,Compiladores,A1,Bruno Lopes,S04,Terca_07h
+TCC00291,Computação Gráfica,A1,Daniela Gorski Trevisan,S19,Terca_07h
+TCC00328,Programação Orientada a Objetos,C1,Lauro Eduardo Kozovits,S01,Terca_07h
+TCC00347,Programação Estruturada,A1,Isabel Cristina Mello Rosseti,S17,Terca_07h
+TCC00226,Desenvolvimento Web,A1,Carlos Alberto Soares Ribeiro,L01,Terca_09h
+TCC00286,Arquiteturas de Computadores,A1,Aline Marins Paes Carvalho,S03,Terca_09h
+TCC00292,Engenharia de Software I,A1,Débora Christina Muchaluat Saade,S04,Terca_09h
+TCC00305,Linguagens Formais e Teoria da Computação,A1,Carlos Alberto de Jesus Martinhon,S02,Terca_09h
+TCC00318,Pesquisa Operacional,A1,Luiz Satoru Ochi,S01,Terca_09h
+TCC00260,Tópicos em Inteligência Artificial II,A1,Taiane Coelho Ramos,S12,Terca_11h
+TCC00307,Programação Científica,A1,Antonio Augusto de Aragão Rocha,S04,Terca_11h
+TCC00313,Redes de Computadores I,A1,Daniel Cardoso Moraes de Oliveira,S01,Terca_11h
+TCC00371,Ética em Inteligência Artificial e Ciência de Dados,A1,Flavia Cristina Bernardini,S20,Terca_11h
+TCC00243,Tópicos em Computação III,Z1,Débora Christina Muchaluat Saade,S12,Terca_14h
+TCC00280,Computação e Meio Ambiente,A1,Aura Conci,S10,Terca_14h
+TCC00205,Linguagens de Programação em Lógica,A1,Andre Maues Brabo Pereira,S12,Terca_16h
+TCC00259,Tópicos em Inteligência Artificial I,A1,Taiane Coelho Ramos,S16,Terca_16h
+TCC00319,Estrutura de Dados,A1,Isabel Cristina Mello Rosseti,S02,Terca_16h
+TCC00320,Introdução a Projeto de Banco de Dados,A1,Marcos Lage,S15,Terca_16h
+TCC00240,Tópicos em Ciência da Computação,A1,Helena Cristina da Gama Leitão,S18,Terca_18h
+TCC00308,Programação de Computadores I,A1,Loana Tito Nogueira,S09,Terca_18h
+TCC00356,Programação de Computadores II,A1,Rebeca Campos Motta,S08,Terca_18h
+TCC00361,Introdução ao Desenvolvimento Web,A1,Pedro Cortez Fetter Lopes,L02,Terca_18h
+TCC00365,Qualidade e Teste de Software,A1,Vânia de Oliveira Neves,S04,Terca_18h
+TCC00368,Pesquisa Operacional para Sistemas de Informação,A1,Ricardo Leiderman,S03,Terca_18h
+TCC00330,Modelagem de Processos de Negócios,A1,Rodrigo S. Monteiro,S06,Terca_20h
+TCC00331,Estrutura de Dados Para Sistemas de Informação,A1,Mariza Ferro,S04,Terca_20h
+TCC00336,Banco de Dados Não Convencionais,Z1,Luiz André Portes Paes Leme,S03,Terca_20h
+TCC00337,Introdução à Interação Humano-Computador,A1,Vanessa Braganholo Murta,S19,Terca_20h
+TCC00355,Laboratório de Resolução de Problemas,EA,Ricardo Leiderman,L03,Terca_20h
 TCC00358,Sistemas Computacionais,B1,Marcos Vinicius Naves Bêdo,S07,Terca_20h
-TCC00363,Gerência de Projeto e Manutenção de Software,A1,Patrick Moratori,S01,Terca_20h
+TCC00359,Redes de Computadores,A1,Flavia Cristina Bernardini,S02,Terca_20h
 TCC00366,Programação de Computadores I,A1,Yuri Abitbol de Menezes Frota,S08,Terca_20h
-TCC00202,Visualização Simulação e Jogos Digitais,X1,Leonardo Cruz da Costa,S14,Quarta_07h
-TCC00230,Tópicos Especiais em Segurança da Informação,A1,Luis Antonio Brasil Kowada,S05,Quarta_07h
-TCC00293,Engenharia de Software II,A1,Leonardo Gresta Paulino Murta,S02,Quarta_07h
-TCC00306,Métodos Numéricos,A1,Eugene Francis Vinod Rebello,S03,Quarta_07h
-TCC00348,Estrutura de Dados e Seus Algoritmos,B1,Patrick Moratori,S06,Quarta_07h
-TCC00195,Metaheurísticas,A1,Luis Antonio Brasil Kowada,S13,Quarta_09h
-TCC00285,Análise e Projeto de Algoritmos,B1,Loana Tito Nogueira,S05,Quarta_09h
-TCC00286,Arquiteturas de Computadores,A1,Aline Marins Paes Carvalho,S03,Quarta_09h
-TCC00297,Inteligência Artificial,A1,Flavia Cristina Bernardini,S01,Quarta_09h
+TCC00366,Programação de Computadores I,B1,Troy Costa Kohwalter,S10,Terca_20h
+TCC00226,Desenvolvimento Web,X1,Carlos Alberto Soares Ribeiro,L02,Quarta_07h
+TCC00230,Tópicos Especiais em Segurança da Informação,A1,Luis Antonio Brasil Kowada,S04,Quarta_07h
+TCC00285,Análise e Projeto de Algoritmos,A1,Luís Felipe Ignácio Cunha,S02,Quarta_07h
+TCC00297,Inteligência Artificial,A1,Flavia Cristina Bernardini,S01,Quarta_07h
+TCC00314,Redes de Computadores II,A1,Flávia Coimbra Delicato,S03,Quarta_07h
+TCC00316,Sistemas Operacionais,A1,Maria Cristina Silva Boeres,S19,Quarta_07h
+TCC00226,Desenvolvimento Web,A1,Carlos Alberto Soares Ribeiro,L01,Quarta_09h
+TCC00285,Análise e Projeto de Algoritmos,B1,Loana Tito Nogueira,S03,Quarta_09h
 TCC00305,Linguagens Formais e Teoria da Computação,A1,Carlos Alberto de Jesus Martinhon,S02,Quarta_09h
-TCC00344,Laboratório de Programação Paralela I,AA,Luciana Cardoso de Castro Salgado,L01,Quarta_09h
-TCC00285,Análise e Projeto de Algoritmos,A1,Luís Felipe Ignácio Cunha,S06,Quarta_11h
-TCC00316,Sistemas Operacionais,A1,Maria Cristina Silva Boeres,S05,Quarta_11h
-TCC00328,Programação Orientada a Objetos,A1,John Reed,S01,Quarta_11h
-TCC04135,Tópicos em Matemática para Computação I,X1,Yuri Abitbol de Menezes Frota,S12,Quarta_11h
-TCC00259,Tópicos em Inteligência Artificial I,A1,Taiane Coelho Ramos,S14,Quarta_14h
-TCC00320,Introdução a Projeto de Banco de Dados,A1,Marcos Lage,S09,Quarta_14h
-TCC00255,Tópicos Especiais em Sistemas de Programação III,A1,Helena Cristina da Gama Leitão,S05,Quarta_18h
-TCC00332,Fundamentos de Sistemas de Informação,A1,Raquel Bravo,S10,Quarta_18h
-TCC00335,Projeto de Banco de Dados para Sistemas de Informação,A1,Luiz André Portes Paes Leme,S04,Quarta_18h
-TCC00361,Introdução ao Desenvolvimento Web,A1,Pedro Cortez Fetter Lopes,L02,Quarta_18h
-TCC00365,Qualidade e Teste de Software,A1,Vânia de Oliveira Neves,S02,Quarta_18h
-TCC00308,Programação de Computadores I,A1,Loana Tito Nogueira,S06,Quarta_20h
-TCC00324,Governança em Tecnologia da Informação,A1,Lauro Eduardo Kozovits,S03,Quarta_20h
-TCC00331,Estrutura de Dados Para Sistemas de Informação,B1,Mario Roberto F. Benevides,S22,Quarta_20h
-TCC00332,Fundamentos de Sistemas de Informação,B1,Patrick Moratori,S09,Quarta_20h
-TCC00336,Banco de Dados Não Convencionais,Z1,Luiz André Portes Paes Leme,S04,Quarta_20h
-TCC00337,Introdução à Interação Humano-Computador,A1,Vanessa Braganholo Murta,S02,Quarta_20h
-TCC00355,Laboratório de Resolução de Problemas,EA,Ricardo Leiderman,L02,Quarta_20h
-TCC00358,Sistemas Computacionais,A1,Raquel Bravo,S24,Quarta_20h
-TCC00360,Visualização de Dados,A1,Rodrigo S. Monteiro,S01,Quarta_20h
-TCC00250,Tópicos em Engenharia de Software I,A1,Troy Costa Kohwalter,S22,Quinta_07h
-TCC00260,Tópicos em Inteligência Artificial II,A1,Taiane Coelho Ramos,S21,Quinta_07h
-TCC00291,Computação Gráfica,A1,Daniela Gorski Trevisan,S06,Quinta_07h
-TCC00297,Inteligência Artificial,A1,Flavia Cristina Bernardini,S02,Quinta_07h
-TCC00301,Laboratório de Programação de Jogos,BA,Esteban Walter Gonzalez Clua,L04,Quinta_07h
-TCC00312,Projeto de Software,A1,Vânia de Oliveira Neves,S01,Quinta_07h
-TCC00347,Programação Estruturada,B1,Ricardo Leiderman,S04,Quinta_07h
-TCC00348,Estrutura de Dados e Seus Algoritmos,A1,Isabel Cristina Mello Rosseti,S19,Quinta_07h
-TCC00288,Banco de Dados II,A1,Luiz André Portes Paes Leme,S02,Quinta_09h
-TCC00292,Engenharia de Software I,A1,Débora Christina Muchaluat Saade,S01,Quinta_09h
-TCC00307,Programação Científica,A1,Antonio Augusto de Aragão Rocha,S05,Quinta_09h
-TCC00318,Pesquisa Operacional,A1,Luiz Satoru Ochi,S04,Quinta_09h
-TCC00251,Tópicos em Engenharia de Software II,A1,Leonardo Gresta Paulino Murta,S13,Quinta_11h
-TCC00296,Fundamentos de Arquiteturas de Computadores,B1,André Renato Villela da Silva,S02,Quinta_11h
-TCC00304,Linguagens de Programação,A1,Bruno Lopes,S01,Quinta_11h
-TCC00313,Redes de Computadores I,A1,Daniel Cardoso Moraes de Oliveira,S04,Quinta_11h
-TCC00347,Programação Estruturada,X1,Vanessa Braganholo Murta,S20,Quinta_11h
-TCC00328,Programação Orientada a Objetos,B1,John Reed,S02,Quinta_14h
-TCC00241,Tópicos em Computação I,A1,Mariza Ferro,S14,Quinta_16h
-TCC00319,Estrutura de Dados,A1,Isabel Cristina Mello Rosseti,S01,Quinta_16h
-TCC00320,Introdução a Projeto de Banco de Dados,B1,Luiz André Portes Paes Leme,S17,Quinta_16h
-TCC00222,Computação e Sociedade Para Sistemas de Informação,A1,Taiane Coelho Ramos,S20,Quinta_18h
-TCC00330,Modelagem de Processos de Negócios,A1,Rodrigo S. Monteiro,S19,Quinta_18h
-TCC00336,Banco de Dados Não Convencionais,A1,Uéverton dos Santos Souza,S03,Quinta_18h
+TCC00347,Programação Estruturada,X1,Vanessa Braganholo Murta,S04,Quarta_09h
+TCC00348,Estrutura de Dados e Seus Algoritmos,A1,Isabel Cristina Mello Rosseti,S19,Quarta_09h
+TCC00348,Estrutura de Dados e Seus Algoritmos,B1,Patrick Moratori,S15,Quarta_09h
+TCC04135,Tópicos em Matemática para Computação I,X1,Yuri Abitbol de Menezes Frota,S16,Quarta_09h
+TCC00195,Metaheurísticas,A1,Luis Antonio Brasil Kowada,S12,Quarta_11h
+TCC00293,Engenharia de Software II,A1,Leonardo Gresta Paulino Murta,S01,Quarta_11h
+TCC00312,Projeto de Software,A1,Vânia de Oliveira Neves,S02,Quarta_11h
+TCC00315,Sistemas Distribuídos,A1,Flávia Coimbra Delicato,S03,Quarta_11h
+TCC00347,Programação Estruturada,B1,Ricardo Leiderman,S09,Quarta_11h
+TCC00308,Programação de Computadores I,B1,Andre Maues Brabo Pereira,S02,Quarta_14h
+TCC00320,Introdução a Projeto de Banco de Dados,B1,Luiz André Portes Paes Leme,S20,Quarta_14h
+TCC00334,Princípios de Banco de Dados,A1,Marcos Lage,S01,Quarta_18h
+TCC00354,Fundamentos Matemáticos para Computação,B1,Anselmo Antunes Montenegro,S08,Quarta_18h
+TCC00360,Visualização de Dados,A1,Rodrigo S. Monteiro,S02,Quarta_18h
+TCC00363,Gerência de Projeto e Manutenção de Software,A1,Patrick Moratori,S04,Quarta_18h
+TCC00222,Computação e Sociedade Para Sistemas de Informação,A1,Taiane Coelho Ramos,S09,Quarta_20h
+TCC00253,Tópicos Especiais em Sistemas de Programação I,A1,Aura Conci,S19,Quarta_20h
+TCC00324,Governança em Tecnologia da Informação,Z1,Daniela Gorski Trevisan,S12,Quarta_20h
+TCC00331,Estrutura de Dados Para Sistemas de Informação,B1,Mario Roberto F. Benevides,S20,Quarta_20h
+TCC00332,Fundamentos de Sistemas de Informação,A1,Raquel Bravo,S06,Quarta_20h
+TCC00335,Projeto de Banco de Dados para Sistemas de Informação,A1,Luiz André Portes Paes Leme,S01,Quarta_20h
+TCC00336,Banco de Dados Não Convencionais,A1,Uéverton dos Santos Souza,S03,Quarta_20h
+TCC00356,Programação de Computadores II,B1,João Felipe Nicolaci Pimentel,S15,Quarta_20h
+TCC00357,Programação Orientada a Objetos I,A1,Rebeca Campos Motta,S02,Quarta_20h
+TCC00251,Tópicos em Engenharia de Software II,A1,Leonardo Gresta Paulino Murta,S13,Quinta_07h
+TCC00285,Análise e Projeto de Algoritmos,A1,Luís Felipe Ignácio Cunha,S03,Quinta_07h
+TCC00290,Computação e Sociedade,A1,Helena Cristina da Gama Leitão,S02,Quinta_07h
+TCC00291,Computação Gráfica,A1,Daniela Gorski Trevisan,S19,Quinta_07h
+TCC00318,Pesquisa Operacional,A1,Luiz Satoru Ochi,S01,Quinta_07h
+TCC00244,Tópicos em Banco de Dados I,A1,Luiz André Portes Paes Leme,S10,Quinta_09h
+TCC00293,Engenharia de Software II,A1,Leonardo Gresta Paulino Murta,S02,Quinta_09h
+TCC00298,Interface Homem-Máquina,A1,Antonio Augusto de Aragão Rocha,S01,Quinta_09h
+TCC00328,Programação Orientada a Objetos,A1,John Reed,S04,Quinta_09h
+TCC00284,Algoritmo em Grafos,A1,Fábio Protti,S02,Quinta_11h
+TCC00287,Banco de Dados I,A1,Raquel Bravo,S01,Quinta_11h
+TCC00289,Compiladores,A1,Bruno Lopes,S04,Quinta_11h
+TCC00347,Programação Estruturada,A1,Isabel Cristina Mello Rosseti,S06,Quinta_11h
+TCC00349,Avaliação de Desempenho,A1,Flávio Seixas,S03,Quinta_11h
+TCC00243,Tópicos em Computação III,Z1,Débora Christina Muchaluat Saade,S16,Quinta_14h
+TCC00259,Tópicos em Inteligência Artificial I,A1,Taiane Coelho Ramos,S10,Quinta_14h
+TCC00271,Tópicos em Linguagem de Programação I,A1,Luís Felipe Ignácio Cunha,S17,Quinta_14h
+TCC00280,Computação e Meio Ambiente,A1,Aura Conci,S18,Quinta_14h
+TCC00319,Estrutura de Dados,B1,Vanessa Braganholo Murta,S19,Quinta_14h
+TCC00359,Redes de Computadores,Z1,Eugene Francis Vinod Rebello,S14,Quinta_14h
+TCC00328,Programação Orientada a Objetos,B1,John Reed,S02,Quinta_16h
+TCC00240,Tópicos em Ciência da Computação,A1,Helena Cristina da Gama Leitão,S18,Quinta_18h
+TCC00332,Fundamentos de Sistemas de Informação,B1,Patrick Moratori,S08,Quinta_18h
+TCC00335,Projeto de Banco de Dados para Sistemas de Informação,A1,Luiz André Portes Paes Leme,S01,Quinta_18h
+TCC00338,Projeto de Software,A1,Luciana Cardoso de Castro Salgado,S04,Quinta_18h
+TCC00354,Fundamentos Matemáticos para Computação,A1,Troy Costa Kohwalter,S09,Quinta_18h
+TCC00356,Programação de Computadores II,A1,Rebeca Campos Motta,S20,Quinta_18h
 TCC00359,Redes de Computadores,A1,Flavia Cristina Bernardini,S02,Quinta_18h
-TCC00362,Sistemas Distribuídos para Sistemas de Informação,A1,Luís Felipe Ignácio Cunha,S01,Quinta_18h
-TCC00366,Programação de Computadores I,A1,Yuri Abitbol de Menezes Frota,S22,Quinta_18h
-TCC00240,Tópicos em Ciência da Computação,A1,Helena Cristina da Gama Leitão,S14,Quinta_20h
-TCC00242,Tópicos em Computação II,A1,Carlos Alberto Soares Ribeiro,S10,Quinta_20h
-TCC00253,Tópicos Especiais em Sistemas de Programação I,A1,Aura Conci,S07,Quinta_20h
-TCC00324,Governança em Tecnologia da Informação,Z1,Daniela Gorski Trevisan,S21,Quinta_20h
-TCC00334,Princípios de Banco de Dados,A1,Marcos Lage,S03,Quinta_20h
-TCC00354,Fundamentos Matemáticos para Computação,A1,Troy Costa Kohwalter,S02,Quinta_20h
-TCC00354,Fundamentos Matemáticos para Computação,B1,Anselmo Antunes Montenegro,S09,Quinta_20h
-TCC00355,Laboratório de Resolução de Problemas,FA,José Viterbo Filho,L01,Quinta_20h
-TCC00356,Programação de Computadores II,A1,Rebeca Campos Motta,S08,Quinta_20h
-TCC00356,Programação de Computadores II,B1,João Felipe Nicolaci Pimentel,S15,Quinta_20h
-TCC00368,Pesquisa Operacional para Sistemas de Informação,A1,Ricardo Leiderman,S04,Quinta_20h
-TCC00230,Tópicos Especiais em Segurança da Informação,A1,Luis Antonio Brasil Kowada,S05,Sexta_07h
-TCC00284,Algoritmo em Grafos,A1,Fábio Protti,S03,Sexta_07h
-TCC00288,Banco de Dados II,A1,Luiz André Portes Paes Leme,S02,Sexta_07h
-TCC00290,Computação e Sociedade,A1,Helena Cristina da Gama Leitão,S01,Sexta_07h
-TCC00315,Sistemas Distribuídos,A1,Flávia Coimbra Delicato,S04,Sexta_07h
-TCC00328,Programação Orientada a Objetos,C1,Lauro Eduardo Kozovits,S06,Sexta_07h
-TCC00347,Programação Estruturada,A1,Isabel Cristina Mello Rosseti,S09,Sexta_07h
-TCC00348,Estrutura de Dados e Seus Algoritmos,B1,Patrick Moratori,S24,Sexta_07h
-TCC00371,Ética em Inteligência Artificial e Ciência de Dados,A1,Flavia Cristina Bernardini,S20,Sexta_07h
-TCC04135,Tópicos em Matemática para Computação I,X1,Yuri Abitbol de Menezes Frota,S14,Sexta_07h
-TCC00226,Desenvolvimento Web,A1,Carlos Alberto Soares Ribeiro,L01,Sexta_09h
-TCC00244,Tópicos em Banco de Dados I,A1,Luiz André Portes Paes Leme,S14,Sexta_09h
-TCC00286,Arquiteturas de Computadores,A1,Aline Marins Paes Carvalho,S01,Sexta_09h
-TCC00287,Banco de Dados I,A1,Raquel Bravo,S03,Sexta_09h
-TCC00298,Interface Homem-Máquina,A1,Antonio Augusto de Aragão Rocha,S02,Sexta_09h
-TCC00314,Redes de Computadores II,A1,Flávia Coimbra Delicato,S06,Sexta_09h
-TCC00226,Desenvolvimento Web,X1,Carlos Alberto Soares Ribeiro,L02,Sexta_11h
-TCC00285,Análise e Projeto de Algoritmos,A1,Luís Felipe Ignácio Cunha,S02,Sexta_11h
-TCC00285,Análise e Projeto de Algoritmos,B1,Loana Tito Nogueira,S06,Sexta_11h
-TCC00289,Compiladores,A1,Bruno Lopes,S03,Sexta_11h
-TCC00305,Linguagens Formais e Teoria da Computação,A1,Carlos Alberto de Jesus Martinhon,S01,Sexta_11h
+TCC00368,Pesquisa Operacional para Sistemas de Informação,A1,Ricardo Leiderman,S03,Quinta_18h
+TCC00308,Programação de Computadores I,A1,Loana Tito Nogueira,S01,Quinta_20h
+TCC00330,Modelagem de Processos de Negócios,A1,Rodrigo S. Monteiro,S04,Quinta_20h
+TCC00337,Introdução à Interação Humano-Computador,A1,Vanessa Braganholo Murta,S03,Quinta_20h
+TCC00355,Laboratório de Resolução de Problemas,FA,José Viterbo Filho,L03,Quinta_20h
+TCC00358,Sistemas Computacionais,A1,Raquel Bravo,S15,Quinta_20h
+TCC00361,Introdução ao Desenvolvimento Web,A1,Pedro Cortez Fetter Lopes,L01,Quinta_20h
+TCC00365,Qualidade e Teste de Software,A1,Vânia de Oliveira Neves,S02,Quinta_20h
+TCC00366,Programação de Computadores I,B1,Troy Costa Kohwalter,S08,Quinta_20h
+TCC00286,Arquiteturas de Computadores,A1,Aline Marins Paes Carvalho,S02,Sexta_07h
+TCC00296,Fundamentos de Arquiteturas de Computadores,B1,André Renato Villela da Silva,S19,Sexta_07h
+TCC00307,Programação Científica,A1,Antonio Augusto de Aragão Rocha,S03,Sexta_07h
+TCC00313,Redes de Computadores I,A1,Daniel Cardoso Moraes de Oliveira,S01,Sexta_07h
+TCC00316,Sistemas Operacionais,A1,Maria Cristina Silva Boeres,S06,Sexta_07h
+TCC00195,Metaheurísticas,A1,Luis Antonio Brasil Kowada,S14,Sexta_09h
+TCC00226,Desenvolvimento Web,X1,Carlos Alberto Soares Ribeiro,L02,Sexta_09h
+TCC00260,Tópicos em Inteligência Artificial II,A1,Taiane Coelho Ramos,S13,Sexta_09h
+TCC00304,Linguagens de Programação,A1,Bruno Lopes,S04,Sexta_09h
+TCC00314,Redes de Computadores II,A1,Flávia Coimbra Delicato,S01,Sexta_09h
+TCC00347,Programação Estruturada,X1,Vanessa Braganholo Murta,S03,Sexta_09h
+TCC00349,Avaliação de Desempenho,A1,Flávio Seixas,S02,Sexta_09h
+TCC00371,Ética em Inteligência Artificial e Ciência de Dados,A1,Flavia Cristina Bernardini,S08,Sexta_09h
+TCC00202,Visualização Simulação e Jogos Digitais,X1,Leonardo Cruz da Costa,S18,Sexta_11h
+TCC00250,Tópicos em Engenharia de Software I,A1,Troy Costa Kohwalter,S10,Sexta_11h
+TCC00292,Engenharia de Software I,A1,Débora Christina Muchaluat Saade,S02,Sexta_11h
+TCC00297,Inteligência Artificial,A1,Flavia Cristina Bernardini,S04,Sexta_11h
+TCC00306,Métodos Numéricos,A1,Eugene Francis Vinod Rebello,S15,Sexta_11h
+TCC00328,Programação Orientada a Objetos,C1,Lauro Eduardo Kozovits,S03,Sexta_11h
 TCC00344,Laboratório de Programação Paralela I,AA,Luciana Cardoso de Castro Salgado,L01,Sexta_11h
-TCC00259,Tópicos em Inteligência Artificial I,A1,Taiane Coelho Ramos,S08,Sexta_14h
-TCC00280,Computação e Meio Ambiente,A1,Aura Conci,S22,Sexta_14h
-TCC00308,Programação de Computadores I,B1,Andre Maues Brabo Pereira,S25,Sexta_14h
-TCC00319,Estrutura de Dados,B1,Vanessa Braganholo Murta,S06,Sexta_14h
-TCC00205,Linguagens de Programação em Lógica,A1,Andre Maues Brabo Pereira,S16,Sexta_16h
-TCC00243,Tópicos em Computação III,Z1,Débora Christina Muchaluat Saade,S21,Sexta_16h
-TCC00271,Tópicos em Linguagem de Programação I,A1,Luís Felipe Ignácio Cunha,S13,Sexta_16h
-TCC00296,Fundamentos de Arquiteturas de Computadores,A1,Aline Marins Paes Carvalho,S02,Sexta_16h
-TCC00307,Programação Científica,Z1,José Viterbo Filho,S12,Sexta_16h
-TCC00320,Introdução a Projeto de Banco de Dados,A1,Marcos Lage,S05,Sexta_16h
-TCC00346,Laboratório de Resolução de Problemas,AA,Fábio Protti,L03,Sexta_16h
-TCC00359,Redes de Computadores,Z1,Eugene Francis Vinod Rebello,S18,Sexta_16h
-TCC00332,Fundamentos de Sistemas de Informação,A1,Raquel Bravo,S07,Sexta_18h
-TCC00332,Fundamentos de Sistemas de Informação,B1,Patrick Moratori,S08,Sexta_18h
-TCC00337,Introdução à Interação Humano-Computador,A1,Vanessa Braganholo Murta,S05,Sexta_18h
-TCC00358,Sistemas Computacionais,B1,Marcos Vinicius Naves Bêdo,S09,Sexta_18h
-TCC00360,Visualização de Dados,A1,Rodrigo S. Monteiro,S01,Sexta_18h
-TCC00255,Tópicos Especiais em Sistemas de Programação III,A1,Helena Cristina da Gama Leitão,S05,Sexta_20h
-TCC00324,Governança em Tecnologia da Informação,A1,Lauro Eduardo Kozovits,S02,Sexta_20h
-TCC00331,Estrutura de Dados Para Sistemas de Informação,A1,Mariza Ferro,S11,Sexta_20h
-TCC00338,Projeto de Software,A1,Luciana Cardoso de Castro Salgado,S04,Sexta_20h
-TCC00341,Segurança da Informação,A1,Luis Antonio Brasil Kowada,S19,Sexta_20h
-TCC00357,Programação Orientada a Objetos I,A1,Rebeca Campos Motta,S01,Sexta_20h
-TCC00366,Programação de Computadores I,B1,Troy Costa Kohwalter,S08,Sexta_20h
+TCC00348,Estrutura de Dados e Seus Algoritmos,B1,Patrick Moratori,S08,Sexta_11h
+TCC00307,Programação Científica,Z1,José Viterbo Filho,S13,Sexta_14h
+TCC00308,Programação de Computadores I,B1,Andre Maues Brabo Pereira,S03,Sexta_14h
+TCC00205,Linguagens de Programação em Lógica,A1,Andre Maues Brabo Pereira,S13,Sexta_16h
+TCC00241,Tópicos em Computação I,A1,Mariza Ferro,S18,Sexta_16h
+TCC00296,Fundamentos de Arquiteturas de Computadores,A1,Aline Marins Paes Carvalho,S04,Sexta_16h
+TCC00319,Estrutura de Dados,A1,Isabel Cristina Mello Rosseti,S01,Sexta_16h
+TCC00320,Introdução a Projeto de Banco de Dados,A1,Marcos Lage,S08,Sexta_16h
+TCC00320,Introdução a Projeto de Banco de Dados,B1,Luiz André Portes Paes Leme,S15,Sexta_16h
+TCC00255,Tópicos Especiais em Sistemas de Programação III,A1,Helena Cristina da Gama Leitão,S03,Sexta_18h
+TCC00324,Governança em Tecnologia da Informação,A1,Lauro Eduardo Kozovits,S01,Sexta_18h
+TCC00324,Governança em Tecnologia da Informação,Z1,Daniela Gorski Trevisan,S12,Sexta_18h
+TCC00331,Estrutura de Dados Para Sistemas de Informação,A1,Mariza Ferro,S05,Sexta_18h
+TCC00336,Banco de Dados Não Convencionais,Z1,Luiz André Portes Paes Leme,S04,Sexta_18h
+TCC00357,Programação Orientada a Objetos I,A1,Rebeca Campos Motta,S02,Sexta_18h
+TCC00358,Sistemas Computacionais,B1,Marcos Vinicius Naves Bêdo,S07,Sexta_18h
+TCC00360,Visualização de Dados,A1,Rodrigo S. Monteiro,S06,Sexta_18h
+TCC00366,Programação de Computadores I,A1,Yuri Abitbol de Menezes Frota,S08,Sexta_18h
+TCC00222,Computação e Sociedade Para Sistemas de Informação,A1,Taiane Coelho Ramos,S08,Sexta_20h
+TCC00242,Tópicos em Computação II,A1,Carlos Alberto Soares Ribeiro,S06,Sexta_20h
+TCC00332,Fundamentos de Sistemas de Informação,A1,Raquel Bravo,S09,Sexta_20h
+TCC00341,Segurança da Informação,A1,Luis Antonio Brasil Kowada,S02,Sexta_20h
+TCC00354,Fundamentos Matemáticos para Computação,B1,Anselmo Antunes Montenegro,S19,Sexta_20h
+TCC00355,Laboratório de Resolução de Problemas,EA,Ricardo Leiderman,L03,Sexta_20h
+TCC00362,Sistemas Distribuídos para Sistemas de Informação,A1,Luís Felipe Ignácio Cunha,S04,Sexta_20h
