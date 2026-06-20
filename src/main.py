@@ -73,8 +73,8 @@ def main():
         avaliador=avaliador,
         grasp=grasp,
         tamanho_populacao=50,
-        geracoes=2000,
-        taxa_mutacao=0.01
+        geracoes=1000,
+        taxa_mutacao=0.0094
     )
 
     print("Iniciando Algoritmo GRASP + Genético + Busca Local")
